@@ -49,6 +49,7 @@ A fictional Web3 and Blockchain conference website exploring innovation, regulat
 ## 1. Project Overview
 
 ### About the Project
+
 CHAIN REACTION is a fictional conference dedicated to Web3 and Blockchain technologies. The website presents the conference programme, speakers, ticket options, and practical visitor information.
 
 The conference explores both the opportunities and challenges of decentralized technologies, including:
@@ -90,6 +91,8 @@ The conference explores both the opportunities and challenges of decentralized t
 ![CHAIN REACTION design prototype2](images/screenshots/design-prototype3.png)
 ![Wireframe](images/screenshots/wireframe.png)
 
+### wireframe
+
 ```text
 ┌──────────────────────────────────────────────┐
 │                    HEADER                    │
@@ -123,27 +126,6 @@ The conference explores both the opportunities and challenges of decentralized t
 └──────────────────────────────────────────────┘
 ```
 
-```text
-
-CHAIN-REACTION/
-│
-├── scss/
-│   ├── abstracts/
-│   ├── base/
-│   ├── components/
-│   ├── layout/
-│   └── main.scss
-│
-├── css/
-│   └── main.css
-│
-├── images/
-│   └── screenshots/
-│
-├── index.html
-└── README.md
-```
-
 ---
 
 ## 3. Website Structure
@@ -151,7 +133,7 @@ CHAIN-REACTION/
 The website is organised as a single page with the following sections:
 
 | Section | Content |
-|---|---|
+| ---------|---------|
 | Hero | Conference identity, date and main call to action |
 | About | Conference introduction and topics |
 | Speakers | At least five fictional speakers |
@@ -190,6 +172,47 @@ The website is organised as a single page with the following sections:
 ## 5. Code Organisation and Conventions
 
 ### Project Structure
+
+```text
+
+bcu26d-inl-2-konferens-cameloasa/
+│
+├── .github/
+│
+├── images/
+│
+├── scss/
+│   ├── abstracts/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   │
+│   ├── base/
+│   │   ├── _reset.scss
+│   │   ├── _typography.scss
+│   │   └── _base.scss
+│   │
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _navigation.scss
+│   │   ├── _main-layout.scss
+│   │   └── _footer.scss
+│   │
+│   ├── components/
+│   │   ├── _hero.scss
+│   │   ├── _schedule.scss
+│   │   ├── _speakers.scss
+│   │   ├── _tickets.scss
+│   │   └── _venue.scss
+│   │
+│   └── main.scss
+│
+├── css/
+│   └── main.css
+│
+├── index.html
+├── .gitignore
+└── README.md
+```
 
 To be completed when the final folder and file structure is established.
 
@@ -252,28 +275,39 @@ Footer	Flexbox
 ### SCSS Architecture
 
 ```text
-CHAIN-REACTION/
-│
 ├── scss/
 │   ├── abstracts/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   │
 │   ├── base/
-│   ├── components/
+│   │   ├── _reset.scss
+│   │   ├── _typography.scss
+│   │   └── _base.scss
+│   │
 │   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _navigation.scss
+│   │   ├── _main-layout.scss
+│   │   └── _footer.scss
+│   │
+│   ├── components/
+│   │   ├── _hero.scss
+│   │   ├── _schedule.scss
+│   │   ├── _speakers.scss
+│   │   ├── _tickets.scss
+│   │   └── _venue.scss
+│   │
 │   └── main.scss
 │
 ├── css/
 │   └── main.css
-│
-├── images/
-│   └── screenshots/
-│
-├── index.html
-└── README.md
 ```
 
 To be documented after the SCSS partials and import structure have been implemented.
 
 ### Code Formatting
+
 Prettier configuration and formatting rules will be documented here.
 
 ---
