@@ -1,0 +1,4 @@
+
+# Ignore generated CSS
+css/
+*.css.map

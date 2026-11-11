@@ -1,0 +1,43 @@
+
+/* ========================================
+CSS RESET
+======================================== */
+
+/* Use border-box sizing for predictable layouts */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Remove the browser's default body margin */
+body {
+margin: 0;
+}
+
+/* Keep media elements within their containers */
+img,
+picture,
+svg,
+video {
+display: block;
+max-width: 100%;
+}
+
+/* Inherit typography in form elements */
+button,
+input,
+select,
+textarea {
+font: inherit;
+}
+
+/* Improve button interaction */
+button {
+cursor: pointer;
+}
+
+/* Allow vertical resizing of text areas */
+textarea {
+resize: vertical;
+}
