@@ -77,7 +77,7 @@ MOBILE
 
     /* Main layout */
     .page-layout {
-        gap: vars.$spacing-lg;
+        gap: vars.$spacing-md;
         padding: vars.$spacing-lg vars.$spacing-sm;
     }
 
@@ -97,7 +97,7 @@ MOBILE
 
     /* Hero */
     .hero {
-        min-height: 20rem;
+        min-height: 16rem;
         padding: vars.$spacing-xl vars.$spacing-sm;
     }
 

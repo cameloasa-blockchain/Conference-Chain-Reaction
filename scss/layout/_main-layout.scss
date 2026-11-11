@@ -7,7 +7,7 @@ MAIN PAGE LAYOUT
 .page-layout {
     display: flex;
     flex-direction: column;
-    gap: vars.$spacing-lg;
+    gap: vars.$spacing-md;
     max-width: vars.$container-max-width;
     margin-inline: auto;
     padding: vars.$spacing-xl vars.$spacing-lg;

@@ -9,8 +9,8 @@ HERO SECTION
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 28rem;
-    padding: vars.$spacing-2xl;
+    min-height: 20rem;
+    padding: vars.$spacing-xs vars.$spacing-2xl;
 }
 
 /* Introductory label */
