@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as vars;
+
+/* ========================================
+HEADER
+======================================== */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Conference logo */
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: vars.$font-weight-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 180ms ease;
+}
+
+/* Decorative logo symbol */
+.site-logo-icon {
+    color: vars.$color-secondary;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+}
+
+/* Logo hover and keyboard interaction */
+.site-logo:hover,
+.site-logo:focus-visible {
+    color: vars.$color-accent;
+}

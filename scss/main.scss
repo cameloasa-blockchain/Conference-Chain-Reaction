@@ -10,3 +10,10 @@ MAIN SCSS
 @use 'base/reset';
 @use 'base/typography';
 @use 'base/base';
+
+// Layout
+@use 'layout/_header';
+//@use 'layout/_footer';
+@use 'layout/_navigation';
+//@use 'layout/main-layout';
+@use 'layout/_responsive';
