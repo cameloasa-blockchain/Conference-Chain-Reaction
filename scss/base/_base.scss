@@ -1,0 +1,43 @@
+
+/* ========================================
+BASE STYLES
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+/* Document settings */
+html {
+scroll-behavior: smooth;
+}
+
+/* Global page styles */
+body {
+//min-width: 20rem;
+background-color: vars.$color-background;
+color: vars.$color-text;
+}
+
+/* Link styles */
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+outline: 0.2rem solid vars.$color-secondary;
+outline-offset: 0.25rem;
+}
+
+/* Text selection */
+::selection {
+background-color: vars.$color-accent;
+color: vars.$color-background;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+html {
+    scroll-behavior: auto;
+}
+}

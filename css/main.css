@@ -1,5 +1,5 @@
 /* ========================================
-   MAIN SCSS
+MAIN SCSS
 ======================================== */
 /* ========================================
 CSS RESET
@@ -41,4 +41,83 @@ button {
 /* Allow vertical resizing of text areas */
 textarea {
   resize: vertical;
+}
+
+/* ========================================
+TYPOGRAPHY
+======================================== */
+/* Base typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Main heading */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+/* Section headings */
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* Subheadings */
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Paragraphs */
+p {
+  margin-block: 0 1rem;
+}
+
+/* ========================================
+BASE STYLES
+======================================== */
+/* Document settings */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global page styles */
+body {
+  background-color: hsl(260, 20%, 9%);
+  color: hsl(0, 0%, 97%);
+}
+
+/* Link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+  outline: 0.2rem solid hsl(25, 95%, 62%);
+  outline-offset: 0.25rem;
+}
+
+/* Text selection */
+::selection {
+  background-color: hsl(270, 85%, 70%);
+  color: hsl(260, 20%, 9%);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }/*# sourceMappingURL=main.css.map */
