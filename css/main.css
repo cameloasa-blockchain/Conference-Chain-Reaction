@@ -93,6 +93,8 @@ html {
 
 /* Global page styles */
 body {
+  position: relative;
+  isolation: isolate;
   background-color: hsl(260, 20%, 9%);
   color: hsl(0, 0%, 97%);
 }
@@ -113,6 +115,16 @@ a {
 ::selection {
   background-color: hsl(270, 85%, 70%);
   color: hsl(260, 20%, 9%);
+}
+
+/* Global page background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(rgba(23, 19, 33, 0.35), rgba(23, 19, 33, 0.6)), url("../images/image-background.svg") center/cover no-repeat;
 }
 
 /* Respect reduced motion preferences */
@@ -185,10 +197,30 @@ NAVIGATION
 }
 
 /* ========================================
-   RESPONSIVE STYLES
+MAIN PAGE LAYOUT
+======================================== */
+.page-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 3rem 2rem;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar {
+  flex: 0 0 22rem;
+}
+
+/* ========================================
+RESPONSIVE STYLES
 ======================================== */
 /* ========================================
-   TABLET
+TABLET
 ======================================== */
 @media (max-width: 48rem) {
   /* Header */
@@ -203,9 +235,12 @@ NAVIGATION
   .site-nav-list {
     gap: 1rem;
   }
+  /* Main layout */
+  /* Hero */
+  /* Speakers */
 }
 /* ========================================
-   MOBILE
+MOBILE
 ======================================== */
 @media (max-width: 40rem) {
   /* Header */
@@ -223,4 +258,38 @@ NAVIGATION
     flex-wrap: wrap;
     gap: 0.75rem 1rem;
   }
+  /* Main layout */
+  /* Hero */
+  /* Speakers */
+}
+/* ========================================
+HERO SECTION
+======================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 28rem;
+  padding: 4rem;
+}
+
+/* Introductory label */
+.hero-eyebrow {
+  color: hsl(25, 95%, 62%);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Main heading */
+.hero-title {
+  color: hsl(270, 85%, 70%);
+  text-transform: uppercase;
+}
+
+/* Hero description */
+.hero-description {
+  max-width: 38rem;
+  color: hsl(250, 10%, 72%);
 }/*# sourceMappingURL=main.css.map */

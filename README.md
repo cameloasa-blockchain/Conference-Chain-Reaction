@@ -443,6 +443,7 @@ The Git history will reflect the actual development process.
 To be completed throughout the project.
 
 - Google Stitch [https://stitch.withgoogle.com/] was used for design prototype
+- ChatGPT created svg images
 
 ### Learning Outcomes
 

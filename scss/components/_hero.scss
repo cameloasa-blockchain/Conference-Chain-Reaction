@@ -1,0 +1,34 @@
+/* ========================================
+HERO SECTION
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 28rem;
+    padding: vars.$spacing-2xl;
+}
+
+/* Introductory label */
+.hero-eyebrow {
+    color: vars.$color-secondary;
+    font-weight: vars.$font-weight-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Main heading */
+.hero-title {
+    color: vars.$color-accent;
+    text-transform: uppercase;
+}
+
+/* Hero description */
+.hero-description {
+    max-width: 38rem;
+    color: vars.$color-text-muted;
+}

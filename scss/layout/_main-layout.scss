@@ -1,0 +1,22 @@
+/* ========================================
+MAIN PAGE LAYOUT
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.page-layout {
+    display: flex;
+    gap: vars.$spacing-lg;
+    max-width: vars.$container-max-width;
+    margin-inline: auto;
+    padding: vars.$spacing-xl vars.$spacing-lg;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar {
+    flex: 0 0 vars.$sidebar-width;
+}

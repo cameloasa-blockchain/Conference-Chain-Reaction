@@ -15,5 +15,8 @@ MAIN SCSS
 @use 'layout/_header';
 //@use 'layout/_footer';
 @use 'layout/_navigation';
-//@use 'layout/main-layout';
+@use 'layout/main-layout';
 @use 'layout/_responsive';
+
+// Components
+@use 'components/_hero';
