@@ -6,12 +6,21 @@ MAIN PAGE LAYOUT
 
 .page-layout {
     display: flex;
+    flex-direction: column;
     gap: vars.$spacing-lg;
     max-width: vars.$container-max-width;
     margin-inline: auto;
     padding: vars.$spacing-xl vars.$spacing-lg;
 }
 
+/* Two-column content area */
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: vars.$spacing-lg;
+}
+
+/* Main content column */
 .main-content {
     flex: 1;
     min-width: 0;

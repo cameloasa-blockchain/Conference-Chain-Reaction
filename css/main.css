@@ -201,12 +201,21 @@ MAIN PAGE LAYOUT
 ======================================== */
 .page-layout {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   max-width: 90rem;
   margin-inline: auto;
   padding: 3rem 2rem;
 }
 
+/* Two-column content area */
+.content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Main content column */
 .main-content {
   flex: 1;
   min-width: 0;
@@ -292,4 +301,55 @@ HERO SECTION
 .hero-description {
   max-width: 38rem;
   color: hsl(250, 10%, 72%);
+}
+
+/* ========================================
+ABOUT SECTION
+======================================== */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 3rem 4rem;
+  border-top: 1px solid hsl(255, 12%, 30%);
+}
+
+/* Introductory label */
+.about-eyebrow {
+  margin-bottom: 0;
+  color: hsl(25, 95%, 62%);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Section heading */
+.about h2 {
+  margin-block: 0 1rem;
+  color: hsl(0, 0%, 97%);
+}
+
+/* Main introduction */
+.about-intro {
+  max-width: 48rem;
+  color: hsl(0, 0%, 97%);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.5;
+}
+
+/* Additional description */
+.about-description {
+  max-width: 45rem;
+  color: hsl(250, 10%, 72%);
+}
+
+/* Closing statement */
+.about-highlight {
+  margin-top: 1rem;
+  color: hsl(270, 85%, 70%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */

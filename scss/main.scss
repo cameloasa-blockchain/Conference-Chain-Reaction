@@ -13,10 +13,15 @@ MAIN SCSS
 
 // Layout
 @use 'layout/_header';
-//@use 'layout/_footer';
+@use 'layout/_footer';
 @use 'layout/_navigation';
 @use 'layout/main-layout';
 @use 'layout/_responsive';
 
 // Components
 @use 'components/_hero';
+@use 'components/_about';
+@use 'components/_schedule';
+@use 'components/_speakers';
+@use 'components/_tickets';
+@use 'components/_venue';
