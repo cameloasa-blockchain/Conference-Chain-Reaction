@@ -27,12 +27,22 @@ TABLET
 
     /* Main layout */
     .page-layout {
-        // Tablet layout
+        padding: vars.$spacing-lg vars.$spacing-md;
+    }
+
+    .content-layout {
+        gap: vars.$spacing-md;
     }
 
     /* Hero */
     .hero {
-        // Tablet adjustments
+        min-height: 24rem;
+        padding: vars.$spacing-xl vars.$spacing-lg;
+    }
+
+    /* About */
+    .about {
+        padding: vars.$spacing-xl vars.$spacing-lg;
     }
 
     /* Speakers */
@@ -67,12 +77,37 @@ MOBILE
 
     /* Main layout */
     .page-layout {
-        // Mobile layout
+        gap: vars.$spacing-lg;
+        padding: vars.$spacing-lg vars.$spacing-sm;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    /* Main content and sidebar */
+    .main-content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex-basis: auto;
     }
 
     /* Hero */
     .hero {
-        // Mobile adjustments
+        min-height: 20rem;
+        padding: vars.$spacing-xl vars.$spacing-sm;
+    }
+
+    /* About */
+    .about {
+        padding: vars.$spacing-lg vars.$spacing-sm;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
     }
 
     /* Speakers */
