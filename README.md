@@ -502,3 +502,5 @@ External resources, fonts and image sources will be credited here.
 ![speaker](images/speakers/speaker.png)
 
 tree /F
+
+![Professionellt techporträtt med lila ljus](<alex-morgan.png>)

@@ -19,7 +19,7 @@ HEADER
     font-weight: vars.$font-weight-bold;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: color 180ms ease;
+    transition: color vars.$transition-fast;
 }
 
 /* Decorative logo symbol */
