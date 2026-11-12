@@ -504,3 +504,21 @@ External resources, fonts and image sources will be credited here.
 tree /F
 
 ![Professionellt techporträtt med lila ljus](<alex-morgan.png>)
+
+### Image Optimization with Python & Pillow
+
+```bash
+py -m pip show Pillow
+```
+
+```bash
+py -c "from PIL import Image; image = Image.open('images/speakers/alex-morgan.png'); image.thumbnail((600, 750), Image.Resampling.LANCZOS); image.save('images/speakers/alex-morgan.webp', 'WEBP', quality=85, method=6); image.close()"
+```
+
+```python
+from PIL import Image
+
+with Image.open("profile-picture.png") as image:
+    image.thumbnail((800, 800), Image.Resampling.LANCZOS)
+    image.save("profile-picture.webp", "WEBP", quality=85, method=6)
+```

@@ -391,4 +391,71 @@ ABOUT SECTION
   font-size: 1.1rem;
   font-weight: 700;
   font-style: italic;
+}
+
+/* ========================================
+SCHEDULE
+======================================== */
+/* Schedule section */
+.schedule {
+  padding: 2rem;
+  background-color: hsl(258, 18%, 15%);
+  border: 1px solid hsl(255, 12%, 30%);
+}
+.schedule h2 {
+  margin-block: 0 1rem;
+}
+.schedule .schedule-intro {
+  color: hsl(250, 10%, 72%);
+  margin-bottom: 2rem;
+}
+
+/* Schedule list */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual schedule items */
+.schedule-item {
+  border-bottom: 1px solid hsl(255, 12%, 30%);
+  padding-bottom: 1.5rem;
+}
+.schedule-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.schedule-item .schedule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.schedule-item .schedule-card time {
+  color: hsl(270, 85%, 70%);
+  font-weight: 700;
+}
+.schedule-item .schedule-card h3 {
+  margin: 0;
+}
+.schedule-item .schedule-card .schedule-speaker {
+  color: hsl(25, 95%, 62%);
+  font-weight: 500;
+}
+.schedule-item .schedule-card .schedule-speaker a {
+  transition: color 180ms ease;
+}
+.schedule-item .schedule-card .schedule-speaker a:hover, .schedule-item .schedule-card .schedule-speaker a:focus-visible {
+  color: hsl(270, 85%, 70%);
+  text-decoration: underline;
+}
+
+/* Special schedule items */
+.schedule-break {
+  background-color: hsl(260, 20%, 9%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
