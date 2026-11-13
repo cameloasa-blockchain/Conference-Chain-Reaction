@@ -598,7 +598,7 @@ TICKETS SECTION
   padding: 0.75rem 1rem;
   color: hsl(0, 0%, 97%);
   background-color: hsl(270, 85%, 70%);
-  border: 1px solid hsl(270, 85%, 70%);
+  border: 1px solid transparent;
   border-radius: 0.5rem;
   font: inherit;
   font-weight: 700;
@@ -607,7 +607,7 @@ TICKETS SECTION
 }
 .ticket-button:hover {
   background-color: hsl(25, 95%, 62%);
-  border-color: hsl(25, 95%, 62%);
+  border-color: hsl(270, 85%, 70%);
 }
 .ticket-button:focus-visible {
   outline: 2px solid hsl(25, 95%, 62%);

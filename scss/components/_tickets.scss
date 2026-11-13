@@ -85,13 +85,14 @@ TICKETS SECTION
 }
 
 /* Ticket button */
+
 .ticket-button {
     width: 100%;
     margin-top: vars.$spacing-md;
     padding: 0.75rem 1rem;
     color: vars.$color-text;
     background-color: vars.$color-accent;
-    border: 1px solid vars.$color-accent;
+    border: 1px solid transparent;
     border-radius: 0.5rem;
     font: inherit;
     font-weight: vars.$font-weight-bold;
@@ -102,7 +103,7 @@ TICKETS SECTION
 
     &:hover {
         background-color: vars.$color-secondary;
-        border-color: vars.$color-secondary;
+        border-color: vars.$color-accent;
     }
 
     &:focus-visible {
@@ -110,3 +111,5 @@ TICKETS SECTION
         outline-offset: 3px;
     }
 }
+
+
