@@ -28,4 +28,5 @@ MAIN PAGE LAYOUT
 
 .sidebar {
     flex: 0 0 vars.$sidebar-width;
+    min-width: 0;
 }

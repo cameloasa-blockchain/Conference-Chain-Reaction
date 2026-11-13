@@ -223,6 +223,7 @@ MAIN PAGE LAYOUT
 
 .sidebar {
   flex: 0 0 22rem;
+  min-width: 0;
 }
 
 /* ========================================
