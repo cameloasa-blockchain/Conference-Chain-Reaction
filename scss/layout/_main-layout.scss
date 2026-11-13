@@ -33,7 +33,7 @@ MAIN PAGE LAYOUT
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: vars.$spacing-lg;
+    gap: vars.$spacing-sm;
 
     flex: 0 0 vars.$sidebar-width;
     min-width: 0;
