@@ -1,0 +1,112 @@
+/* ========================================
+TICKETS SECTION
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.tickets {
+    padding: vars.$spacing-md;
+    background-color: vars.$color-background;
+    border: 1px solid vars.$color-border;
+    border-radius: 1rem;
+
+    h2 {
+        margin-bottom: vars.$spacing-md;
+    }
+}
+
+.ticket-list {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-md;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Individual ticket card */
+.ticket-card {
+    padding: vars.$spacing-md;
+    background-color: vars.$color-surface;
+    border: 1px solid vars.$color-border;
+    border-radius: 0.75rem;
+    transition:
+        border-color vars.$transition-fast,
+        background-color vars.$transition-fast;
+
+    &:hover {
+        border-color: vars.$color-accent;
+        background-color: hsl(258 18% 18%);
+    }
+
+    h3 {
+        margin-bottom: vars.$spacing-xs;
+    }
+}
+
+/* Featured ticket */
+.ticket-card-featured {
+    border-color: vars.$color-accent;
+}
+
+/* Ticket badge */
+.ticket-badge {
+    display: inline-block;
+    margin-bottom: vars.$spacing-xs;
+    color: vars.$color-secondary;
+    font-size: 0.8rem;
+    font-weight: vars.$font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Ticket price */
+.ticket-price {
+    margin-bottom: vars.$spacing-sm;
+    color: vars.$color-accent;
+    font-size: 1.5rem;
+    font-weight: vars.$font-weight-bold;
+}
+
+/* Ticket description */
+.ticket-description {
+    margin-bottom: vars.$spacing-md;
+    color: vars.$color-text-muted;
+}
+
+/* Ticket benefits */
+.ticket-benefits {
+    padding-left: 1.25rem;
+    color: vars.$color-text-muted;
+
+    li + li {
+        margin-top: vars.$spacing-xs;
+    }
+}
+
+/* Ticket button */
+.ticket-button {
+    width: 100%;
+    margin-top: vars.$spacing-md;
+    padding: 0.75rem 1rem;
+    color: vars.$color-text;
+    background-color: vars.$color-accent;
+    border: 1px solid vars.$color-accent;
+    border-radius: 0.5rem;
+    font: inherit;
+    font-weight: vars.$font-weight-bold;
+    cursor: pointer;
+    transition:
+        background-color vars.$transition-fast,
+        border-color vars.$transition-fast;
+
+    &:hover {
+        background-color: vars.$color-secondary;
+        border-color: vars.$color-secondary;
+    }
+
+    &:focus-visible {
+        outline: 2px solid vars.$color-secondary;
+        outline-offset: 3px;
+    }
+}

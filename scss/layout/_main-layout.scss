@@ -22,11 +22,19 @@ MAIN PAGE LAYOUT
 
 /* Main content column */
 .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-2xl;
+
     flex: 1;
     min-width: 0;
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-lg;
+
     flex: 0 0 vars.$sidebar-width;
     min-width: 0;
 }

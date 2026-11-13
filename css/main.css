@@ -218,11 +218,17 @@ MAIN PAGE LAYOUT
 
 /* Main content column */
 .main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   flex: 1;
   min-width: 0;
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   flex: 0 0 22rem;
   min-width: 0;
 }
@@ -382,6 +388,7 @@ SCHEDULE
   padding: 2rem;
   background-color: hsl(258, 18%, 15%);
   border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 1rem;
 }
 .schedule h2 {
   margin-block: 0 1rem;
@@ -449,6 +456,7 @@ SPEAKERS
   padding: 2rem;
   background-color: hsl(258, 18%, 15%);
   border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 1rem;
 }
 .speakers h2 {
   margin-block: 0 1rem;
@@ -504,6 +512,106 @@ SPEAKERS
 }
 .speaker-card article p {
   color: hsl(250, 10%, 72%);
+}
+
+/* ========================================
+TICKETS SECTION
+======================================== */
+.tickets {
+  padding: 1.5rem;
+  background-color: hsl(260, 20%, 9%);
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 1rem;
+}
+.tickets h2 {
+  margin-bottom: 1.5rem;
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual ticket card */
+.ticket-card {
+  padding: 1.5rem;
+  background-color: hsl(258, 18%, 15%);
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 0.75rem;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+.ticket-card:hover {
+  border-color: hsl(270, 85%, 70%);
+  background-color: hsl(258, 18%, 18%);
+}
+.ticket-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Featured ticket */
+.ticket-card-featured {
+  border-color: hsl(270, 85%, 70%);
+}
+
+/* Ticket badge */
+.ticket-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: hsl(25, 95%, 62%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Ticket price */
+.ticket-price {
+  margin-bottom: 1rem;
+  color: hsl(270, 85%, 70%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Ticket description */
+.ticket-description {
+  margin-bottom: 1.5rem;
+  color: hsl(250, 10%, 72%);
+}
+
+/* Ticket benefits */
+.ticket-benefits {
+  padding-left: 1.25rem;
+  color: hsl(250, 10%, 72%);
+}
+.ticket-benefits li + li {
+  margin-top: 0.5rem;
+}
+
+/* Ticket button */
+.ticket-button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  color: hsl(0, 0%, 97%);
+  background-color: hsl(270, 85%, 70%);
+  border: 1px solid hsl(270, 85%, 70%);
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+.ticket-button:hover {
+  background-color: hsl(25, 95%, 62%);
+  border-color: hsl(25, 95%, 62%);
+}
+.ticket-button:focus-visible {
+  outline: 2px solid hsl(25, 95%, 62%);
+  outline-offset: 3px;
 }
 
 /* ========================================
