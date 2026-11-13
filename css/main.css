@@ -539,4 +539,17 @@ MOBILE
   .speaker-list {
     grid-template-columns: 1fr;
   }
+}
+/* Stack main content and sidebar on smaller screens */
+@media (max-width: 64rem) {
+  .content-layout {
+    flex-direction: column;
+  }
+  .main-content,
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar {
+    flex-basis: auto;
+  }
 }/*# sourceMappingURL=main.css.map */
