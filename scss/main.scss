@@ -13,10 +13,9 @@ MAIN SCSS
 
 // Layout
 @use 'layout/_header';
-@use 'layout/_footer';
 @use 'layout/_navigation';
 @use 'layout/main-layout';
-@use 'layout/_responsive';
+@use 'layout/_footer';
 
 // Components
 @use 'components/_hero';
@@ -25,3 +24,6 @@ MAIN SCSS
 @use 'components/_speakers';
 @use 'components/_tickets';
 @use 'components/_venue';
+
+// Responsive
+@use 'layout/_responsive';

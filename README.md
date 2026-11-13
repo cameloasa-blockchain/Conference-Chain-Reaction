@@ -522,3 +522,24 @@ with Image.open("profile-picture.png") as image:
     image.thumbnail((800, 800), Image.Resampling.LANCZOS)
     image.save("profile-picture.webp", "WEBP", quality=85, method=6)
 ```
+
+### overflow
+
+```bash
+document.documentElement.scrollWidth >
+document.documentElement.clientWidth
+```
+
+```bash
+[...document.querySelectorAll('body *')]
+    .filter((element) => {
+        const rect = element.getBoundingClientRect();
+        return rect.right > document.documentElement.clientWidth;
+    })
+    .map((element) => ({
+        element: element.tagName,
+        class: element.className,
+        right: Math.round(element.getBoundingClientRect().right),
+        width: Math.round(element.getBoundingClientRect().width),
+    }));
+```
