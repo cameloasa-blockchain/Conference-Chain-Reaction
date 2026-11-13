@@ -342,21 +342,82 @@
                 <!-- Sidebar -->
                 <aside class="sidebar">
 
+                    
                     <!-- Tickets section -->
                     <section class="tickets" id="tickets">
                         <h2>Choose Your Experience</h2>
 
-                        <form>
-                            <label for="ticket-type">Select your ticket</label>
-                            <select id="ticket-type" name="ticket-type">
-                                <option value="student">Student Pass – 495 SEK</option>
-                                <option value="standard" selected>
-                                    Standard Pass – 1,295 SEK
-                                </option>
-                                <option value="vip">VIP Pass – 2,495 SEK</option>
-                            </select>
-                        </form>
+                        <ul class="ticket-list">
+                            <li class="ticket-card">
+                                <article>
+                                    <h3>Student Pass</h3>
+                                    <p class="ticket-price">495 SEK</p>
+                                    <p class="ticket-description">
+                                        For students exploring the future of Web3.
+                                    </p>
+
+                                    <ul class="ticket-benefits">
+                                        <li>Full conference access</li>
+                                        <li>All talks and presentations</li>
+                                        <li>Open discussion and Q&A</li>
+                                    </ul>
+
+                                    <form>
+                                        <button type="submit" name="ticket" value="student">
+                                            Select Pass
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="ticket-card ticket-card-featured">
+                                <article>
+                                    <p class="ticket-badge">Popular Choice</p>
+                                    <h3>Standard Pass</h3>
+                                    <p class="ticket-price">1,295 SEK</p>
+                                    <p class="ticket-description">
+                                        The complete conference experience.
+                                    </p>
+
+                                    <ul class="ticket-benefits">
+                                        <li>Full conference access</li>
+                                        <li>All talks and presentations</li>
+                                        <li>Networking opportunities</li>
+                                        <li>Open discussion and Q&A</li>
+                                    </ul>
+
+                                    <form>
+                                        <button type="submit" name="ticket" value="standard">
+                                            Select Pass
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+
+                            <li class="ticket-card">
+                                <article>
+                                    <h3>VIP Pass</h3>
+                                    <p class="ticket-price">2,495 SEK</p>
+                                    <p class="ticket-description">
+                                        An enhanced experience for Web3 enthusiasts.
+                                    </p>
+
+                                    <ul class="ticket-benefits">
+                                        <li>All Standard benefits</li>
+                                        <li>Priority seating</li>
+                                        <li>Exclusive networking session</li>
+                                    </ul>
+
+                                    <form>
+                                        <button type="submit" name="ticket" value="vip">
+                                            Select Pass
+                                        </button>
+                                    </form>
+                                </article>
+                            </li>
+                        </ul>
                     </section>
+
 
                     <!-- Venue section -->
                     <section class="venue" id="venue">
