@@ -25,15 +25,6 @@ TABLET
         gap: 1rem;
     }
 
-    /* Main layout */
-    .page-layout {
-        padding: vars.$spacing-lg vars.$spacing-md;
-    }
-
-    .content-layout {
-        gap: vars.$spacing-md;
-    }
-
     /* Hero */
     .hero {
         min-height: 24rem;
@@ -45,9 +36,28 @@ TABLET
         padding: vars.$spacing-xl vars.$spacing-lg;
     }
 
+    /* Main layout */
+    .page-layout {
+        padding: vars.$spacing-lg vars.$spacing-md;
+    }
+
+    .content-layout {
+        flex-direction: column;
+        gap: vars.$spacing-lg;
+    }
+
+    .main-content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex-basis: auto;
+    }
+
     /* Speakers */
     .speaker-list {
-        // Tablet grid adjustments
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -75,6 +85,21 @@ MOBILE
         gap: 0.75rem 1rem;
     }
 
+    /* Hero */
+    .hero {
+        min-height: 16rem;
+        padding: vars.$spacing-xl vars.$spacing-sm;
+    }
+
+    /* About */
+    .about {
+        padding: vars.$spacing-lg vars.$spacing-sm;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+    }
+
     /* Main layout */
     .page-layout {
         gap: vars.$spacing-md;
@@ -95,23 +120,8 @@ MOBILE
         flex-basis: auto;
     }
 
-    /* Hero */
-    .hero {
-        min-height: 16rem;
-        padding: vars.$spacing-xl vars.$spacing-sm;
-    }
-
-    /* About */
-    .about {
-        padding: vars.$spacing-lg vars.$spacing-sm;
-    }
-
-    .about-intro {
-        font-size: 1.1rem;
-    }
-
     /* Speakers */
     .speaker-list {
-        // Mobile grid adjustments
+        grid-template-columns: 1fr;
     }
 }

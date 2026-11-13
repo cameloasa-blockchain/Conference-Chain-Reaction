@@ -1,0 +1,75 @@
+/* ========================================
+SPEAKERS
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+/* Speakers section */
+.speakers {
+    padding: vars.$spacing-lg;
+    background-color: vars.$color-surface;
+    border: 1px solid vars.$color-border;
+
+    h2 {
+        margin-block: 0 vars.$spacing-sm;
+    }
+
+    .speakers-intro {
+        color: vars.$color-text-muted;
+        margin-bottom: vars.$spacing-lg;
+    }
+}
+
+/* Speaker gallery */
+.speaker-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: vars.$spacing-md;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual speaker cards */
+.speaker-card {
+    min-width: 0;
+
+    article {
+        display: grid;
+        grid-template-columns: 6rem minmax(0, 1fr);
+        column-gap: vars.$spacing-sm;
+        row-gap: vars.$spacing-xs;
+        align-content: start;
+        height: 100%;
+        padding: vars.$spacing-sm;
+        background-color: vars.$color-background;
+        border: 1px solid vars.$color-border;
+        border-radius: 0.75rem;
+
+        img {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+            width: 6rem;
+            height: 7.5rem;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .speaker-role {
+            color: vars.$color-text-muted;
+        }
+
+        .speaker-topic {
+            color: vars.$color-accent;
+            font-weight: vars.$font-weight-medium;
+        }
+
+        p {
+            color: vars.$color-text-muted;
+        }
+    }
+}
