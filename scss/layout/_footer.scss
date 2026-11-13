@@ -1,0 +1,71 @@
+/* ========================================
+SITE FOOTER
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.site-footer {
+    max-width: vars.$container-max-width;
+    margin-inline: auto;
+    padding: vars.$spacing-lg vars.$spacing-lg vars.$spacing-xl;
+    border-top: 1px solid vars.$color-border;
+}
+
+/* Footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: vars.$spacing-xl;
+}
+
+/* Footer brand */
+.footer-logo {
+    display: inline-block;
+    color: vars.$color-accent;
+    font-weight: vars.$font-weight-bold;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.footer-brand p {
+    margin-top: vars.$spacing-xs;
+    color: vars.$color-text-muted;
+}
+
+/* Footer navigation */
+.footer-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vars.$spacing-md;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+        color: vars.$color-text-muted;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: vars.$color-accent;
+        }
+
+        &:focus-visible {
+            outline: 2px solid vars.$color-accent;
+            outline-offset: 4px;
+        }
+    }
+}
+
+/* Footer bottom */
+.footer-bottom {
+    margin-top: vars.$spacing-lg;
+    padding-top: vars.$spacing-md;
+    border-top: 1px solid vars.$color-border;
+
+    p {
+        color: vars.$color-text-muted;
+        font-size: 0.875rem;
+    }
+}
