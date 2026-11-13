@@ -543,3 +543,5 @@ document.documentElement.clientWidth
         width: Math.round(element.getBoundingClientRect().width),
     }));
 ```
+
+![växjö konsert hus map](map.png)

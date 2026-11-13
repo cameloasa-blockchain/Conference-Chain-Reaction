@@ -615,6 +615,105 @@ TICKETS SECTION
 }
 
 /* ========================================
+VENUE SECTION
+======================================== */
+.venue {
+  padding: 1.5rem;
+  background-color: hsl(260, 20%, 9%);
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 1rem;
+}
+.venue h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Venue address */
+.venue address {
+  margin-bottom: 1.5rem;
+  color: hsl(250, 10%, 72%);
+  font-style: normal;
+  line-height: 1.6;
+}
+.venue address strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: hsl(0, 0%, 97%);
+  font-weight: 700;
+}
+
+/* Venue map */
+.venue img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 0.75rem;
+}
+
+/* ========================================
+SPONSORS SECTION
+======================================== */
+.sponsors {
+  padding: 1.5rem;
+  background-color: hsl(260, 20%, 9%);
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 1rem;
+}
+.sponsors h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Sponsor cards layout */
+.sponsor-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual sponsor card */
+.sponsor-card {
+  padding: 1rem;
+  background-color: hsl(258, 18%, 15%);
+  border: 1px solid hsl(255, 12%, 30%);
+  border-radius: 0.75rem;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+.sponsor-card:hover {
+  border-color: hsl(270, 85%, 70%);
+  background-color: hsl(258, 18%, 18%);
+}
+.sponsor-card a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: hsl(270, 85%, 70%);
+  font-weight: 700;
+  text-decoration: none;
+}
+.sponsor-card a:hover {
+  color: hsl(25, 95%, 62%);
+}
+.sponsor-card a:focus-visible {
+  outline: 2px solid hsl(25, 95%, 62%);
+  outline-offset: 3px;
+}
+.sponsor-card p {
+  color: hsl(250, 10%, 72%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: hsl(250, 10%, 72%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ========================================
 RESPONSIVE STYLES
 ======================================== */
 /* ========================================

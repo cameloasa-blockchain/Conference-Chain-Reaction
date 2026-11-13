@@ -1,0 +1,42 @@
+/* ========================================
+VENUE SECTION
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.venue {
+    padding: vars.$spacing-md;
+    background-color: vars.$color-background;
+    border: 1px solid vars.$color-border;
+    border-radius: 1rem;
+
+    h2 {
+        margin-bottom: vars.$spacing-md;
+    }
+}
+
+/* Venue address */
+.venue address {
+    margin-bottom: vars.$spacing-md;
+    color: vars.$color-text-muted;
+    font-style: normal;
+    line-height: 1.6;
+
+    strong {
+        display: block;
+        margin-bottom: vars.$spacing-xs;
+        color: vars.$color-text;
+        font-weight: vars.$font-weight-bold;
+    }
+}
+
+/* Venue map */
+.venue img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 1px solid vars.$color-border;
+    border-radius: 0.75rem;
+}

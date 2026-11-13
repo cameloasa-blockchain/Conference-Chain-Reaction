@@ -1,0 +1,72 @@
+/* ========================================
+SPONSORS SECTION
+======================================== */
+
+@use '../abstracts/variables' as vars;
+
+.sponsors {
+    padding: vars.$spacing-md;
+    background-color: vars.$color-background;
+    border: 1px solid vars.$color-border;
+    border-radius: 1rem;
+
+    h2 {
+        margin-bottom: vars.$spacing-md;
+    }
+}
+
+/* Sponsor cards layout */
+.sponsor-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: vars.$spacing-sm;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Individual sponsor card */
+.sponsor-card {
+    padding: vars.$spacing-sm;
+    background-color: vars.$color-surface;
+    border: 1px solid vars.$color-border;
+    border-radius: 0.75rem;
+    transition:
+        border-color vars.$transition-fast,
+        background-color vars.$transition-fast;
+
+    &:hover {
+        border-color: vars.$color-accent;
+        background-color: hsl(258 18% 18%);
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: vars.$spacing-xs;
+        color: vars.$color-accent;
+        font-weight: vars.$font-weight-bold;
+        text-decoration: none;
+
+        &:hover {
+            color: vars.$color-secondary;
+        }
+
+        &:focus-visible {
+            outline: 2px solid vars.$color-secondary;
+            outline-offset: 3px;
+        }
+    }
+
+    p {
+        color: vars.$color-text-muted;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        color: vars.$color-text-muted;
+        font-size: 0.875rem;
+        line-height: 1.5;
+
+    }
+}
