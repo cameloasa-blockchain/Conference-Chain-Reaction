@@ -8,6 +8,7 @@ HEADER
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: vars.$spacing-lg;
 }
 
 /* Conference logo */

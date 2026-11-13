@@ -18,7 +18,7 @@ NAVIGATION
 .site-nav a {
     color: vars.$color-text;
     font-weight: vars.$font-weight-medium;
-    transition: color 180ms ease;
+    transition: color vars.$transition-fast;
 }
 
 /* Hover and keyboard interaction */
