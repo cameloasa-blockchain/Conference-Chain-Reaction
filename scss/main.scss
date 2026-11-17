@@ -11,6 +11,9 @@ MAIN SCSS
 @use 'base/typography';
 @use 'base/base';
 
+// Themes
+@use 'themes/color-theme';
+
 // Layout
 @use 'layout/_header';
 @use 'layout/_navigation';
@@ -25,6 +28,7 @@ MAIN SCSS
 @use 'components/_tickets';
 @use 'components/_venue';
 @use 'components/_sponsors';
+@use 'components/animations';
 
 // Responsive
 @use 'layout/_responsive';

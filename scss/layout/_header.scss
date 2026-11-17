@@ -21,6 +21,7 @@ HEADER
     letter-spacing: 0.08em;
     text-transform: uppercase;
     transition: color vars.$transition-fast;
+    animation: logoPulse 3s ease-in-out infinite;
 }
 
 /* Decorative logo symbol */
