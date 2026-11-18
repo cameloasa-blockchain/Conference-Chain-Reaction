@@ -1,6 +1,31 @@
 /* ========================================
 MAIN SCSS
 ======================================== */
+/* Default dark theme */
+:root {
+  color-scheme: dark;
+  --color-background: hsl(260, 20%, 9%);
+  --color-surface: hsl(258, 18%, 15%);
+  --color-text: hsl(0, 0%, 97%);
+  --color-text-muted: hsl(250, 10%, 72%);
+  --color-accent: hsl(270, 85%, 70%);
+  --color-secondary: hsl(25, 95%, 62%);
+  --color-border: hsl(255, 12%, 30%);
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --color-background: hsl(260 15% 97%);
+    --color-surface: hsl(0 0% 100%);
+    --color-text: hsl(260 20% 12%);
+    --color-text-muted: hsl(260 10% 35%);
+    --color-accent: hsl(270 65% 42%);
+    --color-secondary: hsl(25 85% 42%);
+    --color-border: hsl(260 10% 80%);
+  }
+}
 /* ========================================
 CSS RESET
 ======================================== */
@@ -95,8 +120,8 @@ html {
 body {
   position: relative;
   isolation: isolate;
-  background-color: hsl(260, 20%, 9%);
-  color: hsl(0, 0%, 97%);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 /* Link styles */
@@ -131,31 +156,6 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-}
-/* Default dark theme */
-:root {
-  color-scheme: dark;
-  --color-background: hsl(260, 20%, 9%);
-  --color-surface: hsl(258, 18%, 15%);
-  --color-text: hsl(0, 0%, 97%);
-  --color-text-muted: hsl(250, 10%, 72%);
-  --color-accent: hsl(270, 85%, 70%);
-  --color-secondary: hsl(25, 95%, 62%);
-  --color-border: hsl(255, 12%, 30%);
-}
-
-/* Light theme */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    --color-background: hsl(260 15% 97%);
-    --color-surface: hsl(0 0% 100%);
-    --color-text: hsl(260 20% 12%);
-    --color-text-muted: hsl(260 10% 35%);
-    --color-accent: hsl(270 65% 42%);
-    --color-secondary: hsl(25 85% 42%);
-    --color-border: hsl(260 10% 80%);
   }
 }
 /* ========================================
@@ -765,7 +765,7 @@ ANIMATIONS
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .site-logo-icon {
+  .site-logo {
     animation: none;
   }
 }

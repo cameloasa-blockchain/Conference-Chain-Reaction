@@ -6,13 +6,13 @@ MAIN SCSS
 // Abstracts
 @use 'abstracts/variables';
 
+// Themes
+@use 'themes/color-theme';
+
 // Base
 @use 'base/reset';
 @use 'base/typography';
 @use 'base/base';
-
-// Themes
-@use 'themes/color-theme';
 
 // Layout
 @use 'layout/_header';
