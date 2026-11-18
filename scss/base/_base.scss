@@ -13,8 +13,8 @@ scroll-behavior: smooth;
 body {
 position: relative;
 isolation: isolate;
-background-color: var(--color-background);
-color: var(--color-text);
+background-color: vars.$color-background;
+color: vars.$color-text;
 }
 
 /* Link styles */

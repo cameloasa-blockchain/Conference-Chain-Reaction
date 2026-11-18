@@ -120,8 +120,8 @@ html {
 body {
   position: relative;
   isolation: isolate;
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: hsl(260, 20%, 9%);
+  color: hsl(0, 0%, 97%);
 }
 
 /* Link styles */
