@@ -9,13 +9,13 @@ HERO SECTION
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 20rem;
+    min-height: 10rem;
     padding: vars.$spacing-xs vars.$spacing-2xl;
 }
 
 /* Introductory label */
 .hero-eyebrow {
-    color: vars.$color-secondary;
+    color: var(--color-secondary);
     font-weight: vars.$font-weight-bold;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -23,12 +23,12 @@ HERO SECTION
 
 /* Main heading */
 .hero-title {
-    color: vars.$color-accent;
+    color: var(--color-accent);
     text-transform: uppercase;
 }
 
 /* Hero description */
 .hero-description {
     max-width: 38rem;
-    color: vars.$color-text-muted;
+    color: var(--color-text-muted);
 }

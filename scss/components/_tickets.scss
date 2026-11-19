@@ -6,8 +6,8 @@ TICKETS SECTION
 
 .tickets {
     padding: vars.$spacing-md;
-    background-color: vars.$color-background;
-    border: 1px solid vars.$color-border;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
 
     h2 {
@@ -27,16 +27,16 @@ TICKETS SECTION
 /* Individual ticket card */
 .ticket-card {
     padding: vars.$spacing-md;
-    background-color: vars.$color-surface;
-    border: 1px solid vars.$color-border;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 0.75rem;
     transition:
         border-color vars.$transition-fast,
         background-color vars.$transition-fast;
 
     &:hover {
-        border-color: vars.$color-accent;
-        background-color: hsl(258 18% 18%);
+        border-color: var(--color-accent);
+        background-color: var(--color-surface-hover);
     }
 
     h3 {
@@ -46,14 +46,14 @@ TICKETS SECTION
 
 /* Featured ticket */
 .ticket-card-featured {
-    border-color: vars.$color-accent;
+    border-color: var(--color-accent);
 }
 
 /* Ticket badge */
 .ticket-badge {
     display: inline-block;
     margin-bottom: vars.$spacing-xs;
-    color: vars.$color-secondary;
+    color: var(--color-secondary);
     font-size: 0.8rem;
     font-weight: vars.$font-weight-bold;
     text-transform: uppercase;
@@ -63,7 +63,7 @@ TICKETS SECTION
 /* Ticket price */
 .ticket-price {
     margin-bottom: vars.$spacing-sm;
-    color: vars.$color-accent;
+    color: var(--color-accent);
     font-size: 1.5rem;
     font-weight: vars.$font-weight-bold;
 }
@@ -71,13 +71,13 @@ TICKETS SECTION
 /* Ticket description */
 .ticket-description {
     margin-bottom: vars.$spacing-md;
-    color: vars.$color-text-muted;
+    color: var(--color-text-muted);
 }
 
 /* Ticket benefits */
 .ticket-benefits {
     padding-left: 1.25rem;
-    color: vars.$color-text-muted;
+    color: var(--color-text-muted);
 
     li + li {
         margin-top: vars.$spacing-xs;
@@ -90,8 +90,8 @@ TICKETS SECTION
     width: 100%;
     margin-top: vars.$spacing-md;
     padding: 0.75rem 1rem;
-    color: vars.$color-background;
-    background-color: vars.$color-accent;
+    color: var(--color-background);
+    background-color: var(--color-accent);
     border: 1px solid transparent;
     border-radius: 0.5rem;
     font: inherit;
@@ -102,14 +102,15 @@ TICKETS SECTION
         border-color vars.$transition-fast;
 
     &:hover {
-        background-color: vars.$color-secondary;
-        border-color: vars.$color-accent;
+        background-color: var(--color-secondary);
+        border-color: var(--color-accent);
     }
 
     &:focus-visible {
-        outline: 2px solid vars.$color-secondary;
+        outline: 2px solid var(--color-secondary);
         outline-offset: 3px;
     }
+
 }
 
 

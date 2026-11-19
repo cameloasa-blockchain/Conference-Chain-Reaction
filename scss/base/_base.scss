@@ -2,8 +2,6 @@
 BASE STYLES
 ======================================== */
 
-@use '../abstracts/variables' as vars;
-
 /* Document settings */
 html {
 scroll-behavior: smooth;
@@ -13,8 +11,8 @@ scroll-behavior: smooth;
 body {
 position: relative;
 isolation: isolate;
-background-color: vars.$color-background;
-color: vars.$color-text;
+background-color: var(--color-background);
+color: var(--color-text);
 }
 
 /* Link styles */
@@ -25,14 +23,14 @@ text-decoration: none;
 
 /* Keyboard accessibility */
 :focus-visible {
-outline: 0.2rem solid vars.$color-secondary;
+outline: 0.2rem solid var(--color-secondary);
 outline-offset: 0.25rem;
 }
 
 /* Text selection */
 ::selection {
-background-color: vars.$color-accent;
-color: vars.$color-background;
+background-color: var(--color-accent);
+color: var(--color-background);
 }
 
 /* Global page background */
@@ -49,6 +47,13 @@ body::before {
             rgba(23, 19, 33, 0.6)
         ),
         url('../images/image-background.svg') center / cover no-repeat;
+}
+
+/* Light theme background */
+@media (prefers-color-scheme: light) {
+    body::before {
+        background: none;
+    }
 }
 
 /* Respect reduced motion preferences */

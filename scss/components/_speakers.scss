@@ -7,8 +7,8 @@ SPEAKERS
 /* Speakers section */
 .speakers {
     padding: vars.$spacing-lg;
-    background-color: vars.$color-surface;
-    border: 1px solid vars.$color-border;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
 
     h2 {
@@ -16,7 +16,7 @@ SPEAKERS
     }
 
     .speakers-intro {
-        color: vars.$color-text-muted;
+        color: var(--color-text-muted);
         margin-bottom: vars.$spacing-lg;
     }
 }
@@ -43,8 +43,8 @@ SPEAKERS
         align-content: start;
         height: 100%;
         padding: vars.$spacing-sm;
-        background-color: vars.$color-background;
-        border: 1px solid vars.$color-border;
+        background-color: var(--color-background);
+        border: 1px solid var(--color-border);
         border-radius: 0.75rem;
 
         img {
@@ -61,16 +61,16 @@ SPEAKERS
         }
 
         .speaker-role {
-            color: vars.$color-text-muted;
+            color: var(--color-text-muted);
         }
 
         .speaker-topic {
-            color: vars.$color-accent;
+            color: var(--color-accent);
             font-weight: vars.$font-weight-medium;
         }
 
         p {
-            color: vars.$color-text-muted;
+            color: var(--color-text-muted);
         }
     }
 }

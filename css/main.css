@@ -6,6 +6,7 @@ MAIN SCSS
   color-scheme: dark;
   --color-background: hsl(260, 20%, 9%);
   --color-surface: hsl(258, 18%, 15%);
+  --color-surface-hover: hsl(258, 18%, 18%);
   --color-text: hsl(0, 0%, 97%);
   --color-text-muted: hsl(250, 10%, 72%);
   --color-accent: hsl(270, 85%, 70%);
@@ -19,6 +20,7 @@ MAIN SCSS
     color-scheme: light;
     --color-background: hsl(260 15% 97%);
     --color-surface: hsl(0 0% 100%);
+    --color-surface-hover: hsl(260 15% 93%);
     --color-text: hsl(260 20% 12%);
     --color-text-muted: hsl(260 10% 35%);
     --color-accent: hsl(270 65% 42%);
@@ -120,8 +122,8 @@ html {
 body {
   position: relative;
   isolation: isolate;
-  background-color: hsl(260, 20%, 9%);
-  color: hsl(0, 0%, 97%);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 /* Link styles */
@@ -132,14 +134,14 @@ a {
 
 /* Keyboard accessibility */
 :focus-visible {
-  outline: 0.2rem solid hsl(25, 95%, 62%);
+  outline: 0.2rem solid var(--color-secondary);
   outline-offset: 0.25rem;
 }
 
 /* Text selection */
 ::selection {
-  background-color: hsl(270, 85%, 70%);
-  color: hsl(260, 20%, 9%);
+  background-color: var(--color-accent);
+  color: var(--color-background);
 }
 
 /* Global page background */
@@ -152,6 +154,12 @@ body::before {
   background: linear-gradient(rgba(23, 19, 33, 0.35), rgba(23, 19, 33, 0.6)), url("../images/image-background.svg") center/cover no-repeat;
 }
 
+/* Light theme background */
+@media (prefers-color-scheme: light) {
+  body::before {
+    background: none;
+  }
+}
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -183,7 +191,7 @@ HEADER
 
 /* Decorative logo symbol */
 .site-logo-icon {
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
   font-size: 1.5rem;
   line-height: 1;
   width: 1.75rem;
@@ -194,7 +202,7 @@ HEADER
 /* Logo hover and keyboard interaction */
 .site-logo:hover,
 .site-logo:focus-visible {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
 }
 
 /* ========================================
@@ -212,7 +220,7 @@ NAVIGATION
 
 /* Navigation links */
 .site-nav a {
-  color: hsl(0, 0%, 97%);
+  color: var(--color-text);
   font-weight: 500;
   transition: color 180ms ease;
 }
@@ -220,7 +228,7 @@ NAVIGATION
 /* Hover and keyboard interaction */
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
 }
 
 /* ========================================
@@ -246,7 +254,7 @@ MAIN PAGE LAYOUT
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   flex: 1;
   min-width: 0;
 }
@@ -266,29 +274,30 @@ SITE FOOTER
   max-width: 90rem;
   margin-inline: auto;
   padding: 2rem 2rem 3rem;
-  border-top: 1px solid hsl(255, 12%, 30%);
+  border-top: 1px solid var(--color-border);
 }
 
 /* Footer content */
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
-/* Footer brand */
+/* Footer logo */
 .footer-logo {
   display: inline-block;
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
 }
 
+/* Footer brand */
 .footer-brand p {
   margin-top: 0.5rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 
 /* Footer navigation */
@@ -301,15 +310,15 @@ SITE FOOTER
   list-style: none;
 }
 .footer-nav-list a {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 180ms ease;
 }
 .footer-nav-list a:hover {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
 }
 .footer-nav-list a:focus-visible {
-  outline: 2px solid hsl(270, 85%, 70%);
+  outline: 2px solid var(--color-accent);
   outline-offset: 4px;
 }
 
@@ -317,10 +326,10 @@ SITE FOOTER
 .footer-bottom {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid hsl(255, 12%, 30%);
+  border-top: 1px solid var(--color-border);
 }
 .footer-bottom p {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
   font-size: 0.875rem;
 }
 
@@ -332,13 +341,13 @@ HERO SECTION
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 20rem;
+  min-height: 10rem;
   padding: 0.5rem 4rem;
 }
 
 /* Introductory label */
 .hero-eyebrow {
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -346,14 +355,14 @@ HERO SECTION
 
 /* Main heading */
 .hero-title {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   text-transform: uppercase;
 }
 
 /* Hero description */
 .hero-description {
   max-width: 38rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 
 /* ========================================
@@ -370,7 +379,7 @@ ABOUT SECTION
 /* Introductory label */
 .about-eyebrow {
   margin-bottom: 0;
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -379,14 +388,14 @@ ABOUT SECTION
 
 /* Section heading */
 .about h2 {
-  margin-block: 0 1rem;
-  color: hsl(0, 0%, 97%);
+  margin-block: 0;
+  color: var(--color-text);
 }
 
 /* Main introduction */
 .about-intro {
-  max-width: 48rem;
-  color: hsl(0, 0%, 97%);
+  max-width: 45rem;
+  color: var(--color-text);
   font-size: clamp(1.15rem, 2vw, 1.4rem);
   line-height: 1.5;
 }
@@ -394,13 +403,13 @@ ABOUT SECTION
 /* Additional description */
 .about-description {
   max-width: 45rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 
 /* Closing statement */
 .about-highlight {
   margin-top: 1rem;
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-size: 1.1rem;
   font-weight: 700;
   font-style: italic;
@@ -412,15 +421,15 @@ SCHEDULE
 /* Schedule section */
 .schedule {
   padding: 2rem;
-  background-color: hsl(258, 18%, 15%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
 }
 .schedule h2 {
   margin-block: 0 1rem;
 }
 .schedule .schedule-intro {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
 }
 
@@ -436,7 +445,7 @@ SCHEDULE
 
 /* Individual schedule items */
 .schedule-item {
-  border-bottom: 1px solid hsl(255, 12%, 30%);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 1.5rem;
 }
 .schedule-item:last-child {
@@ -449,27 +458,27 @@ SCHEDULE
   gap: 0.5rem;
 }
 .schedule-item .schedule-card time {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-weight: 700;
 }
 .schedule-item .schedule-card h3 {
   margin: 0;
 }
 .schedule-item .schedule-card .schedule-speaker {
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
   font-weight: 500;
 }
 .schedule-item .schedule-card .schedule-speaker a {
   transition: color 180ms ease;
 }
 .schedule-item .schedule-card .schedule-speaker a:hover, .schedule-item .schedule-card .schedule-speaker a:focus-visible {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
 /* Special schedule items */
 .schedule-break {
-  background-color: hsl(260, 20%, 9%);
+  background-color: var(--color-background);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
@@ -480,15 +489,15 @@ SPEAKERS
 /* Speakers section */
 .speakers {
   padding: 2rem;
-  background-color: hsl(258, 18%, 15%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
 }
 .speakers h2 {
   margin-block: 0 1rem;
 }
 .speakers .speakers-intro {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
 }
 
@@ -514,8 +523,8 @@ SPEAKERS
   align-content: start;
   height: 100%;
   padding: 1rem;
-  background-color: hsl(260, 20%, 9%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
 }
 .speaker-card article img {
@@ -530,14 +539,14 @@ SPEAKERS
   margin: 0;
 }
 .speaker-card article .speaker-role {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 .speaker-card article .speaker-topic {
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-weight: 500;
 }
 .speaker-card article p {
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 
 /* ========================================
@@ -545,8 +554,8 @@ TICKETS SECTION
 ======================================== */
 .tickets {
   padding: 1.5rem;
-  background-color: hsl(260, 20%, 9%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
 }
 .tickets h2 {
@@ -565,14 +574,14 @@ TICKETS SECTION
 /* Individual ticket card */
 .ticket-card {
   padding: 1.5rem;
-  background-color: hsl(258, 18%, 15%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
   transition: border-color 180ms ease, background-color 180ms ease;
 }
 .ticket-card:hover {
-  border-color: hsl(270, 85%, 70%);
-  background-color: hsl(258, 18%, 18%);
+  border-color: var(--color-accent);
+  background-color: var(--color-surface-hover);
 }
 .ticket-card h3 {
   margin-bottom: 0.5rem;
@@ -580,14 +589,14 @@ TICKETS SECTION
 
 /* Featured ticket */
 .ticket-card-featured {
-  border-color: hsl(270, 85%, 70%);
+  border-color: var(--color-accent);
 }
 
 /* Ticket badge */
 .ticket-badge {
   display: inline-block;
   margin-bottom: 0.5rem;
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -597,7 +606,7 @@ TICKETS SECTION
 /* Ticket price */
 .ticket-price {
   margin-bottom: 1rem;
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -605,13 +614,13 @@ TICKETS SECTION
 /* Ticket description */
 .ticket-description {
   margin-bottom: 1.5rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 
 /* Ticket benefits */
 .ticket-benefits {
   padding-left: 1.25rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
 }
 .ticket-benefits li + li {
   margin-top: 0.5rem;
@@ -622,8 +631,8 @@ TICKETS SECTION
   width: 100%;
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
-  color: hsl(260, 20%, 9%);
-  background-color: hsl(270, 85%, 70%);
+  color: var(--color-background);
+  background-color: var(--color-accent);
   border: 1px solid transparent;
   border-radius: 0.5rem;
   font: inherit;
@@ -632,11 +641,11 @@ TICKETS SECTION
   transition: background-color 180ms ease, border-color 180ms ease;
 }
 .ticket-button:hover {
-  background-color: hsl(25, 95%, 62%);
-  border-color: hsl(270, 85%, 70%);
+  background-color: var(--color-secondary);
+  border-color: var(--color-accent);
 }
 .ticket-button:focus-visible {
-  outline: 2px solid hsl(25, 95%, 62%);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
 }
 
@@ -645,8 +654,8 @@ VENUE SECTION
 ======================================== */
 .venue {
   padding: 1.5rem;
-  background-color: hsl(260, 20%, 9%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
 }
 .venue h2 {
@@ -656,14 +665,14 @@ VENUE SECTION
 /* Venue address */
 .venue address {
   margin-bottom: 1.5rem;
-  color: hsl(250, 10%, 72%);
+  color: var(--color-text-muted);
   font-style: normal;
   line-height: 1.6;
 }
 .venue address strong {
   display: block;
   margin-bottom: 0.5rem;
-  color: hsl(0, 0%, 97%);
+  color: var(--color-text);
   font-weight: 700;
 }
 
@@ -674,7 +683,7 @@ VENUE SECTION
   height: auto;
   aspect-ratio: 3/2;
   object-fit: cover;
-  border: 1px solid hsl(255, 12%, 30%);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
 }
 
@@ -683,8 +692,8 @@ SPONSORS SECTION
 ======================================== */
 .sponsors {
   padding: 1.5rem;
-  background-color: hsl(260, 20%, 9%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
 }
 .sponsors h2 {
@@ -703,40 +712,43 @@ SPONSORS SECTION
 
 /* Individual sponsor card */
 .sponsor-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 1rem;
-  background-color: hsl(258, 18%, 15%);
-  border: 1px solid hsl(255, 12%, 30%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
   transition: border-color 180ms ease, background-color 180ms ease;
 }
 .sponsor-card:hover {
-  border-color: hsl(270, 85%, 70%);
-  background-color: hsl(258, 18%, 18%);
+  border-color: var(--color-accent);
+  background-color: var(--color-background);
 }
 .sponsor-card a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
   margin-bottom: 0.5rem;
-  color: hsl(270, 85%, 70%);
+  color: var(--color-accent);
   font-weight: 700;
   text-decoration: none;
 }
 .sponsor-card a:hover {
-  color: hsl(25, 95%, 62%);
+  color: var(--color-secondary);
 }
 .sponsor-card a:focus-visible {
-  outline: 2px solid hsl(25, 95%, 62%);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
 }
 .sponsor-card p {
-  color: hsl(250, 10%, 72%);
+  flex-grow: 1;
+  color: var(--color-text-muted);
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0;
   max-width: 100%;
   overflow-wrap: anywhere;
-  color: hsl(250, 10%, 72%);
-  font-size: 0.875rem;
-  line-height: 1.5;
 }
 
 /* ========================================
@@ -758,7 +770,7 @@ ANIMATIONS
     transform: scale(1);
   }
   50% {
-    transform: scale(1.12);
+    transform: scale(1.04);
   }
   100% {
     transform: scale(1);
@@ -801,16 +813,9 @@ TABLET
   .page-layout {
     padding: 2rem 1.5rem;
   }
+  /* Content layout */
   .content-layout {
-    flex-direction: column;
     gap: 2rem;
-  }
-  .main-content,
-  .sidebar {
-    width: 100%;
-  }
-  .sidebar {
-    flex-basis: auto;
   }
   /* Speakers */
   .speaker-list {
@@ -854,24 +859,13 @@ MOBILE
     gap: 1.5rem;
     padding: 2rem 1rem;
   }
-  .content-layout {
-    flex-direction: column;
-  }
-  /* Main content and sidebar */
-  .main-content,
-  .sidebar {
-    width: 100%;
-  }
-  .sidebar {
-    flex-basis: auto;
-  }
   /* Speakers */
   .speaker-list {
     grid-template-columns: 1fr;
   }
 }
 /* ========================================
-Stack main content and sidebar on smaller screens 
+STACK MAIN CONTENT AND SIDEBAR
 ======================================== */
 @media (max-width: 64rem) {
   .content-layout {

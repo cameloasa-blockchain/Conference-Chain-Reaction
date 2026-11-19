@@ -15,7 +15,7 @@ ABOUT SECTION
 /* Introductory label */
 .about-eyebrow {
     margin-bottom: 0;
-    color: vars.$color-secondary;
+    color: var(--color-secondary);
     font-size: 0.85rem;
     font-weight: vars.$font-weight-bold;
     letter-spacing: 0.1em;
@@ -24,14 +24,14 @@ ABOUT SECTION
 
 /* Section heading */
 .about h2 {
-    margin-block: 0 vars.$spacing-sm;
-    color: vars.$color-text;
+    margin-block: 0;
+    color: var(--color-text);
 }
 
 /* Main introduction */
 .about-intro {
-    max-width: 48rem;
-    color: vars.$color-text;
+    max-width: 45rem;
+    color: var(--color-text);
     font-size: clamp(1.15rem, 2vw, 1.4rem);
     line-height: 1.5;
 }
@@ -39,13 +39,13 @@ ABOUT SECTION
 /* Additional description */
 .about-description {
     max-width: 45rem;
-    color: vars.$color-text-muted;
+    color: var(--color-text-muted);
 }
 
 /* Closing statement */
 .about-highlight {
     margin-top: vars.$spacing-sm;
-    color: vars.$color-accent;
+    color: var(--color-accent);
     font-size: 1.1rem;
     font-weight: vars.$font-weight-bold;
     font-style: italic;

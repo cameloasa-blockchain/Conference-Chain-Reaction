@@ -8,29 +8,30 @@ SITE FOOTER
     max-width: vars.$container-max-width;
     margin-inline: auto;
     padding: vars.$spacing-lg vars.$spacing-lg vars.$spacing-xl;
-    border-top: 1px solid vars.$color-border;
+    border-top: 1px solid var(--color-border);
 }
 
 /* Footer content */
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
-    gap: vars.$spacing-xl;
+    gap: vars.$spacing-md;
 }
 
-/* Footer brand */
+/* Footer logo */
 .footer-logo {
     display: inline-block;
-    color: vars.$color-accent;
+    color: var(--color-accent);
     font-weight: vars.$font-weight-bold;
     letter-spacing: 0.08em;
     text-decoration: none;
 }
 
+/* Footer brand */
 .footer-brand p {
     margin-top: vars.$spacing-xs;
-    color: vars.$color-text-muted;
+    color: var(--color-text-muted);
 }
 
 /* Footer navigation */
@@ -43,16 +44,16 @@ SITE FOOTER
     list-style: none;
 
     a {
-        color: vars.$color-text-muted;
+        color: var(--color-text-muted);
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: color vars.$transition-fast;
 
         &:hover {
-            color: vars.$color-accent;
+            color: var(--color-accent);
         }
 
         &:focus-visible {
-            outline: 2px solid vars.$color-accent;
+            outline: 2px solid var(--color-accent);
             outline-offset: 4px;
         }
     }
@@ -62,10 +63,10 @@ SITE FOOTER
 .footer-bottom {
     margin-top: vars.$spacing-lg;
     padding-top: vars.$spacing-md;
-    border-top: 1px solid vars.$color-border;
+    border-top: 1px solid var(--color-border);
 
     p {
-        color: vars.$color-text-muted;
+        color: var(--color-text-muted);
         font-size: 0.875rem;
     }
 }

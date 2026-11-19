@@ -7,8 +7,8 @@ SCHEDULE
 /* Schedule section */
 .schedule {
     padding: vars.$spacing-lg;
-    background-color: vars.$color-surface;
-    border: 1px solid vars.$color-border;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
 
     h2 {
@@ -16,7 +16,7 @@ SCHEDULE
     }
 
     .schedule-intro {
-        color: vars.$color-text-muted;
+        color: var(--color-text-muted);
         margin-bottom: vars.$spacing-lg;
     }
 }
@@ -33,7 +33,7 @@ SCHEDULE
 
 /* Individual schedule items */
 .schedule-item {
-    border-bottom: 1px solid vars.$color-border;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: vars.$spacing-md;
 
     &:last-child {
@@ -47,7 +47,7 @@ SCHEDULE
         gap: vars.$spacing-xs;
 
         time {
-            color: vars.$color-accent;
+            color: var(--color-accent);
             font-weight: vars.$font-weight-bold;
         }
 
@@ -56,7 +56,7 @@ SCHEDULE
         }
 
         .schedule-speaker {
-            color: vars.$color-secondary;
+            color: var(--color-secondary);
             font-weight: vars.$font-weight-medium;
 
             a {
@@ -64,7 +64,7 @@ SCHEDULE
 
                 &:hover,
                 &:focus-visible {
-                    color: vars.$color-accent;
+                    color: var(--color-accent);
                     text-decoration: underline;
                 }
             }
@@ -74,7 +74,7 @@ SCHEDULE
 
 /* Special schedule items */
 .schedule-break {
-    background-color: vars.$color-background;
+    background-color: var(--color-background);
     padding: vars.$spacing-md;
     border-radius: 0.5rem;
 }

@@ -24,7 +24,7 @@ MAIN PAGE LAYOUT
 .main-content {
     display: flex;
     flex-direction: column;
-    gap: vars.$spacing-2xl;
+    gap: vars.$spacing-sm;
 
     flex: 1;
     min-width: 0;
@@ -34,7 +34,6 @@ MAIN PAGE LAYOUT
     display: flex;
     flex-direction: column;
     gap: vars.$spacing-sm;
-
     flex: 0 0 vars.$sidebar-width;
     min-width: 0;
 }

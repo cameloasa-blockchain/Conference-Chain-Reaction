@@ -41,18 +41,9 @@ TABLET
         padding: vars.$spacing-lg vars.$spacing-md;
     }
 
+    /* Content layout */
     .content-layout {
-        flex-direction: column;
         gap: vars.$spacing-lg;
-    }
-
-    .main-content,
-    .sidebar {
-        width: 100%;
-    }
-
-    .sidebar {
-        flex-basis: auto;
     }
 
     /* Speakers */
@@ -107,20 +98,6 @@ MOBILE
         padding: vars.$spacing-lg vars.$spacing-sm;
     }
 
-    .content-layout {
-        flex-direction: column;
-    }
-
-    /* Main content and sidebar */
-    .main-content,
-    .sidebar {
-        width: 100%;
-    }
-
-    .sidebar {
-        flex-basis: auto;
-    }
-
     /* Speakers */
     .speaker-list {
         grid-template-columns: 1fr;
@@ -128,10 +105,10 @@ MOBILE
 }
 
 /* ========================================
-Stack main content and sidebar on smaller screens 
+STACK MAIN CONTENT AND SIDEBAR
 ======================================== */
 
-@media (max-width: 64rem) {
+@media (max-width: vars.$breakpoint-desktop) {
     .content-layout {
         flex-direction: column;
     }

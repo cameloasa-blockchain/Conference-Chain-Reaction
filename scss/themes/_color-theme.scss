@@ -6,6 +6,7 @@
 
     --color-background: #{vars.$color-background};
     --color-surface: #{vars.$color-surface};
+    --color-surface-hover: #{vars.$color-surface-hover};
     --color-text: #{vars.$color-text};
     --color-text-muted: #{vars.$color-text-muted};
     --color-accent: #{vars.$color-accent};
@@ -20,6 +21,7 @@
 
         --color-background: hsl(260 15% 97%);
         --color-surface: hsl(0 0% 100%);
+        --color-surface-hover: hsl(260 15% 93%);
         --color-text: hsl(260 20% 12%);
         --color-text-muted: hsl(260 10% 35%);
         --color-accent: hsl(270 65% 42%);

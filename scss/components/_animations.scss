@@ -13,7 +13,6 @@ ANIMATIONS
     }
 }
 
-
 /* Subtle logo pulse animation */
 @keyframes logoPulse {
     0% {
@@ -21,7 +20,7 @@ ANIMATIONS
     }
 
     50% {
-        transform: scale(1.12);
+        transform: scale(1.04);
     }
 
     100% {
@@ -34,3 +33,4 @@ ANIMATIONS
         animation: none;
     }
 }
+
