@@ -24,7 +24,7 @@ MAIN SCSS
     --color-text: hsl(260 20% 12%);
     --color-text-muted: hsl(260 10% 35%);
     --color-accent: hsl(270 65% 42%);
-    --color-secondary: hsl(25 85% 42%);
+    --color-secondary: hsl(25 85% 38%);
     --color-border: hsl(260 10% 80%);
   }
 }
@@ -681,8 +681,6 @@ VENUE SECTION
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3/2;
-  object-fit: cover;
   border: 1px solid var(--color-border);
   border-radius: 0.75rem;
 }
@@ -754,16 +752,6 @@ SPONSORS SECTION
 /* ========================================
 ANIMATIONS
 ======================================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* Subtle logo pulse animation */
 @keyframes logoPulse {
   0% {
