@@ -76,12 +76,6 @@ The conference explores both the opportunities and challenges of decentralized t
 
 ### Wireframe
 
-![CHAIN REACTION wireframe](images/screenshots/wireframe.png)
-
-![Wireframe](images/screenshots/wireframe.png)
-
-### wireframe
-
 ```text
 ┌──────────────────────────────────────────────┐
 │                    HEADER                    │
@@ -344,7 +338,7 @@ Lighthouse audits are performed in mobile mode.
 
 The accessibility of the website is checked using the WAVE Web Accessibility Evaluation Tool.
 
-**Result:** ![Wave Validator result](images/screenshots/accessibility-result)
+**Result:** ![Wave Validator result](images/screenshots/accessibility-result.png)
 
 ### Additional Testing
 
@@ -429,5 +423,6 @@ Possible future improvements include:
 - **Enhanced Accessibility** – continue improving accessibility based on validation results and usability testing.
 - **Responsive Refinements** – further optimise spacing, typography, and component layouts across different screen sizes.
 - **Interactive Programme** – introduce an interactive conference schedule to help visitors explore sessions.
+- **Interactive Ticket Selection** – implement ticket selection and a functional booking flow using JavaScript and a suitable backend integration.
 - **Improved Venue Information** – provide more detailed directions and visitor information.
 - **SEO Improvements** – further refine metadata, page descriptions, and social sharing information.
