@@ -37,6 +37,7 @@ The conference explores both the opportunities and challenges of decentralized t
 - **Speakers Section** – introduces five fictional speakers and their conference topics.
 - **Ticket Options** – presents three ticket levels: Student Pass, Standard Pass, and VIP Pass.
 - **Venue Information** – provides the conference venue address and a static map.
+- **Sponsors Information** – provides the conference sponsors.
 - **Light and Dark Themes** – adapts the website's color scheme to the user's system preference.
 - **CSS Animations** – adds subtle visual effects while respecting reduced-motion preferences.
 - **Flexbox and CSS Grid** – organize page layouts and speaker cards.
@@ -78,9 +79,9 @@ The conference explores both the opportunities and challenges of decentralized t
 
 ```text
 ┌──────────────────────────────────────────────┐
-│                    HEADER                    │
+│ LOGO       HEADER          NAVIGATION        │
 │                                              │
-│  LOGO             NAVIGATION                 │
+│                                              │
 │                                              │
 ├──────────────────────────────────────────────┤
 │                                              │
@@ -89,7 +90,7 @@ The conference explores both the opportunities and challenges of decentralized t
 │  ┌────────────────────────┐ ┌──────────────┐ │
 │  │                        │ │              │ │
 │  │         HERO           │ │    ASIDE     │ │
-│  │                        │ │              │ │
+│  │                        │ │───────────── │ │
 │  ├────────────────────────┤ │   TICKETS    │ │
 │  │                        │ │              │ │
 │  │         ABOUT          │ ├──────────────┤ │
