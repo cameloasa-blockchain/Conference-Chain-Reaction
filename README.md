@@ -339,7 +339,7 @@ Lighthouse audits are performed in mobile mode.
 
 The accessibility of the website is checked using the WAVE Web Accessibility Evaluation Tool.
 
-**Result:** ![Wave Validator result](images/screenshots/accessibility-result.png)
+**Result:** ![Wave Validator result](images/screenshots/accesibility-result.png)
 
 ### Additional Testing
 
@@ -421,9 +421,9 @@ External resources, fonts, and third-party assets are acknowledged where applica
 Possible future improvements include:
 
 - **Expanded Visual Content** – add more original or appropriately licensed images and visual assets.
-- **Enhanced Accessibility** – continue improving accessibility based on validation results and usability testing.
-- **Responsive Refinements** – further optimise spacing, typography, and component layouts across different screen sizes.
+- **Enhanced Accessibility** – continue improving accessibility based on validation and usability testing.
+- **Responsive Refinements** – further optimise spacing, typography, and layouts across different screen sizes.
 - **Interactive Programme** – introduce an interactive conference schedule to help visitors explore sessions.
-- **Interactive Ticket Selection** – implement ticket selection and a functional booking flow using JavaScript and a suitable backend integration.
+- **Interactive Ticket Selection** – implement ticket selection and a functional booking process using JavaScript and a suitable backend.
 - **Improved Venue Information** – provide more detailed directions and visitor information.
 - **SEO Improvements** – further refine metadata, page descriptions, and social sharing information.
