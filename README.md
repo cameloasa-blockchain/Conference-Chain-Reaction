@@ -1,10 +1,14 @@
 # CHAIN REACTION – Web3 Conference
 
+## Quick Link
+
+[View Live Project](https://medieinstitutet.github.io/bcu26d-inl-2-konferens-cameloasa/)
+
 A fictional Web3 and Blockchain conference website exploring innovation, regulation, security, and the future of decentralized technologies.
 
 **Project type:** One-page conference website  
-**Status:** In development  
-**Technologies:** HTML5, Sass (SCSS)  
+**Status:** Completed  
+**Technologies:** HTML5, Sass (SCSS), CSS
 
 ---
 
@@ -12,7 +16,7 @@ A fictional Web3 and Blockchain conference website exploring innovation, regulat
 
 ### About the Project
 
-CHAIN REACTION is a fictional conference dedicated to Web3 and Blockchain technologies. The website presents the conference programme, speakers, ticket options, and practical visitor information.
+CHAIN REACTION is a fictional one-day conference dedicated to Web3 and Blockchain technologies. The website presents the conference programme, speakers, ticket options, and practical visitor information.
 
 The conference explores both the opportunities and challenges of decentralized technologies, including:
 
@@ -22,15 +26,20 @@ The conference explores both the opportunities and challenges of decentralized t
 - Cryptocurrency exchange risks and industry controversies
 - DeFi and the future of Web3
 
-### Project Goals
+### Features
 
-- Build a responsive, accessible one-page conference website.
-- Apply semantic HTML5 correctly.
-- Develop styling with Sass (SCSS).
-- Practise advanced CSS selectors and animations.
-- Understand responsive layouts using Flexbox and CSS Grid.
-- Implement basic light and dark themes.
-- Meet the accessibility and technical requirements of the assignment.
+- **Responsive Layout** – adapts to desktop, tablet, and mobile screen sizes.
+- **Two-Column Structure** – organizes the main content and sidebar on larger screens, with a stacked layout on smaller devices.
+- **Semantic HTML5** – uses semantic elements to create a meaningful page structure.
+- **Navigation Menu** – provides links to the main sections of the conference website.
+- **About Section** – introduces the conference and its focus on Web3 and Blockchain technologies.
+- **Schedule Section** – presents the one-day conference programme, including session times, titles, speakers, and descriptions.
+- **Speakers Section** – introduces five fictional speakers and their conference topics.
+- **Ticket Options** – presents three ticket levels: Student Pass, Standard Pass, and VIP Pass.
+- **Venue Information** – provides the conference venue address and a static map.
+- **Light and Dark Themes** – adapts the website's color scheme to the user's system preference.
+- **CSS Animations** – adds subtle visual effects while respecting reduced-motion preferences.
+- **Flexbox and CSS Grid** – organize page layouts and speaker cards.
 
 ---
 
@@ -41,16 +50,34 @@ The conference explores both the opportunities and challenges of decentralized t
 **Visual direction:**
 
 - Bold editorial typography
-- Cream, black, and acid green colour palette!!!
+- Dark and light themes with purple and orange accent colours
 - Contemporary layouts and geometric details
-- Clear content hierarchy
-- Responsive speaker and ticket presentations
+- Clear visual hierarchy and consistent spacing
+- Responsive speaker, ticket, and sponsor presentations
+- Subtle animations and accessible interactive states
 
-**Design decisions:** To be completed.
+**Design decisions:**
 
-![CHAIN REACTION design prototype1](images/screenshots/design-prototype1.png)
-![CHAIN REACTION design prototype2](images/screenshots/design-prototype2.png)
-![CHAIN REACTION design prototype2](images/screenshots/design-prototype3.png)
+- A two-column desktop layout separates the main conference content from the sidebar.
+- Flexbox is used for the main page layout and content alignment.
+- CSS Grid is used for the speaker gallery.
+- The sidebar groups ticket, venue, and sponsor information.
+- A dark theme is the default, with a light theme based on the user's system preference.
+- Responsive breakpoints adapt the layout to desktop, tablet, and mobile screens.
+- The visual design uses reusable Sass variables and CSS custom properties for consistent styling.
+
+### Design Prototypes
+
+![CHAIN REACTION design prototype 1](images/screenshots/design-prototype1.png)
+
+![CHAIN REACTION design prototype 2](images/screenshots/design-prototype2.png)
+
+![CHAIN REACTION design prototype 3](images/screenshots/design-prototype3.png)
+
+### Wireframe
+
+![CHAIN REACTION wireframe](images/screenshots/wireframe.png)
+
 ![Wireframe](images/screenshots/wireframe.png)
 
 ### wireframe
@@ -59,7 +86,7 @@ The conference explores both the opportunities and challenges of decentralized t
 ┌──────────────────────────────────────────────┐
 │                    HEADER                    │
 │                                              │
-│  LOGO             NAVIGATION                  │
+│  LOGO             NAVIGATION                 │
 │                                              │
 ├──────────────────────────────────────────────┤
 │                                              │
@@ -92,17 +119,21 @@ The conference explores both the opportunities and challenges of decentralized t
 
 ## 3. Website Structure
 
-The website is organised as a single page with the following sections:
+The website is organised as a single-page layout with a header, main content area, sidebar, and footer.
 
-| Section | Content |
-| ---------|---------|
-| Hero | Conference identity, date and main call to action |
-| About | Conference introduction and topics |
-| Speakers | At least five fictional speakers |
-| Programme | At least five talks with times, titles, speakers and descriptions |
-| Tickets | At least three ticket categories |
-| Practical Information | Venue, address, directions and static map |
-| Footer | Contact and additional information |
+| Section  | Content                                                                                                              |
+| -------- | -------------------------------------------------------------------------------------------------------------------- |
+| Header   | Conference logo and navigation links to the main sections                                                            |
+| Hero     | Conference identity, date, and main call to action                                                                   |
+| About    | Conference introduction and key Web3 and Blockchain topics                                                           |
+| Schedule | One-day conference programme with session times, titles, speakers, and descriptions                                  |
+| Speakers | Gallery featuring five fictional conference speakers                                                                 |
+| Tickets  | Three ticket categories: Student Pass, Standard Pass, and VIP Pass                                                   |
+| Venue    | Venue details, address, and static map                                                                               |
+| Sponsors | Showcase of real companies operating in the Web3 and Blockchain industries, presented for illustrative purposes only |
+| Footer   | Additional navigation links to the main website sections                                                             |
+
+On desktop screens, the main content and sidebar are displayed in a two-column layout. The sidebar groups the ticket, venue, and sponsor information. On smaller screens, the layout adapts to a single column.
 
 ---
 
@@ -113,21 +144,23 @@ The website is organised as a single page with the following sections:
 - HTML5
 - Sass (SCSS)
 - CSS3
-- CSS Flexbox
-- CSS Grid
+- CSS Flexbox and Grid
 - CSS animations and media queries
+- CSS custom properties
+- Responsive web design
 
 ### Development Tools
 
 - Visual Studio Code
 - Git and GitHub
-- GitHub Copilot (assistance when needed)
+- GitHub Pages
+- GitHub Copilot (AI assistance when needed)
 - Chrome DevTools
+- Firefox DevTools
 - Lighthouse
-- W3C HTML Validator
+- W3C Nu HTML Checker
+- W3C CSS Validator
 - Prettier
-
-**Tools and versions:** To be completed.
 
 ---
 
@@ -136,85 +169,72 @@ The website is organised as a single page with the following sections:
 ### Project Structure
 
 ```text
-
 bcu26d-inl-2-konferens-cameloasa/
-│   .gitignore
-│   .prettierignore
-│   .prettierrc.json
-│   index.html
-│   README.md
-│   
-├───.github
-│   │   copilot-instructions.md
-│   │   
-│   └───workflows
-│           deploy.yml
-│           
-├───.vscode
-│       settings.json
-│       
-├───css
-│       main.css
-│       main.css.map
-│       
-├───images
-│   │   favicon.svg
-│   │   image-background.svg
-│   │   
-│   ├───map
-│   │       map.png
-│   │       map.webp
-│   │       
-│   ├───screenshots
-│   │       design-prototype1.png
-│   │       design-prototype2.png
-│   │       design-prototype3.png
-│   │       wireframe.png
-│   │       
-│   └───speakers
-│           daniel-reed.svg
-│           emma-chen.svg
-│           marcus-weber.svg
-│           profile-picture.png
-│           profile-picture.webp
-│           sofia-lindstrom.svg
-│           speaker.png
-│           
-└───scss
-    │   main.scss
-    │   
-    ├───abstracts
-    │       _variables.scss
-    │       
-    ├───base
-    │       _base.scss
-    │       _reset.scss
-    │       _typography.scss
-    │       
-    ├───components
-    │       _about.scss
-    │       _hero.scss
-    │       _schedule.scss
-    │       _speakers.scss
-    │       _sponsors.scss
-    │       _tickets.scss
-    │       _venue.scss
-    │       
-    └───layout
-            _footer.scss
-            _header.scss
-            _main-layout.scss
-            _navigation.scss
-            _responsive.scss
+│
+├── .github/
+│   ├── copilot-instructions.md
+│   └── workflows/
+│       └── deploy.yml
+│
+├── .vscode/
+│   └── settings.json
+│
+├── css/
+│   ├── main.css
+│   └── main.css.map
+│
+├── images/
+│   ├── map/
+│   ├── screenshots/
+│   └── speakers/
+│
+├── scss/
+│   ├── abstracts/
+│   │   └── _variables.scss
+│   ├── base/
+│   │   ├── _base.scss
+│   │   ├── _reset.scss
+│   │   └── _typography.scss
+│   ├── components/
+│   │   ├── _about.scss
+│   │   ├── _hero.scss
+│   │   ├── _schedule.scss
+│   │   ├── _speakers.scss
+│   │   ├── _sponsors.scss
+│   │   ├── _tickets.scss
+│   │   └── _venue.scss
+│   ├── layout/
+│   │   ├── _footer.scss
+│   │   ├── _header.scss
+│   │   ├── _main-layout.scss
+│   │   ├── _navigation.scss
+│   │   └── _responsive.scss
+│   └── main.scss
+│
+├── .gitignore
+├── .prettierignore
+├── .prettierrc.json
+├── index.html
+└── README.md
 ```
 
-To be completed when the final folder and file structure is established.
+### Image Assets
 
-### CSS Naming Convention
+The `images` directory contains visual assets organised into separate folders for the venue map, screenshots, and speaker images.
 
-**Convention:** To be confirmed (proposed: kebab-case).
+A limited selection of image assets was used in the final website. Some images planned during the design process were not included in the final implementation. This was a deliberate choice to keep the project manageable and avoid using third-party images without first considering their copyright and usage permissions.
+
+### Naming Conventions
+
+- SCSS partials use the underscore prefix (`_filename.scss`).
+- CSS classes use **kebab-case** consistently.
+- Sass modules are organised into partials and included using `@use`.
+- Reusable values are managed through Sass variables and CSS custom properties.
+- Generated CSS is compiled from the SCSS source files and is not edited manually.
 
 ### HTML Architecture
+
+The website uses semantic HTML5 elements to organise its content into meaningful sections.
 
 ```text
 body
@@ -230,184 +250,127 @@ body
 │   │   └── section.speakers
 │   └── aside.sidebar
 │       ├── section.tickets
-│       └── section.venue
+│       ├── section.venue
+│       └── section.sponsors
 └── footer.site-footer
 ```
 
-```text
-HEADER
-└── NAV
-
-MAIN
-├── MAIN CONTENT
-│   ├── HERO
-│   ├── ABOUT
-│   ├── SCHEDULE
-│   └── SPEAKERS
-│
-└── ASIDE
-    ├── TICKETS
-    └── VENUE
-        ├── ADDRESS
-        └── STATIC MAP
-
-FOOTER
-```
-
-| Element | Technology  |
-|---|---| 
-Header + navigation	Flexbox
-Main + Aside	Flexbox
-Hero	Flexbox
-About	Normal document flow
-Schedule	Flexbox
-Speakers	CSS Grid
-Tickets	SCSS + form controls
-Venue	Flexbox
-Footer	Flexbox
-
-### SCSS Architecture
-
-```text
-scss
-    │   main.scss
-    │   
-    ├───abstracts
-    │       _variables.scss
-    │       
-    ├───base
-    │       _base.scss
-    │       _reset.scss
-    │       _typography.scss
-    │       
-    ├───components
-    │       _about.scss
-    │       _hero.scss
-    │       _schedule.scss
-    │       _speakers.scss
-    │       _sponsors.scss
-    │       _tickets.scss
-    │       _venue.scss
-    │       
-    └───layout
-            _footer.scss
-            _header.scss
-            _main-layout.scss
-            _navigation.scss
-            _responsive.scss
-```
-
-To be documented after the SCSS partials and import structure have been implemented.
+The main content and sidebar are arranged using Flexbox on larger screens and stacked vertically on smaller screens. CSS Grid is used for the speaker gallery.
 
 ### Code Formatting
 
-The project uses **Prettier** to maintain consistent code formatting across HTML, SCSS, CSS and JSON files.
+The project uses **Prettier** to maintain consistent code formatting across HTML, SCSS, CSS, and JSON files.
 
 Formatting rules are defined in `.prettierrc.json`:
 
 - 4 spaces for indentation.
-- Spaces instead of tabs.
 - Semicolons enabled.
 - Single quotes for strings.
 - Trailing commas in multiline structures.
 - Maximum line width of 100 characters.
 - LF line endings.
 
-The VS Code workspace is configured to format files automatically on save.
+The VS Code workspace is configured to format supported files automatically on save.
 
-Generated CSS source maps and compiled CSS are excluded from Prettier formatting through `.prettierignore`. The compiled CSS is generated by Live Sass Compiler and should not be edited manually.
+Generated CSS and source map files are excluded from Prettier formatting through `.prettierignore`. The compiled CSS is generated from the SCSS source files using Live Sass Compiler and should not be edited manually.
 
 ---
 
 ## 6. Accessibility and Responsive Design
 
-The website aims to follow WCAG 2.2 Level AA principles.
+The website is designed with accessibility and responsive design principles in mind, following relevant WCAG 2.2 Level AA guidelines.
 
 ### Accessibility
 
-- Semantic HTML landmarks
-- Correct heading hierarchy
-- Keyboard navigation
-- Visible custom focus indicators using `:focus-visible`
-- Accessible hover and focus interactions
-- Sufficient colour contrast
-- Appropriate image alternative text
-- Reduced-motion support
+- Semantic HTML landmarks.
+- Logical heading hierarchy.
+- Keyboard-accessible navigation and interactive elements.
+- Visible focus indicators using `:focus-visible`.
+- Hover interactions with corresponding keyboard focus states.
+- Colour contrast considered for both light and dark themes.
+- Descriptive alternative text for meaningful images.
+- Reduced-motion support for users who prefer less animation.
 
-### Responsive Testing
+### Responsive Design
 
-## Testing
+The layout adapts to different screen sizes using CSS media queries, Flexbox, and CSS Grid.
 
-### Responsive testing
-
-The website is tested at different viewport widths to identify
-horizontal overflow, overlapping elements and content clipping.
-
-| Viewport | Browser zoom | Horizontal overflow |
-|----------|--------------|---------------------|
-| 320 × 540 | 200% | No |
-| 375 × 540 | 100% | No |
-
-Additional responsive tests will be performed at 768px, 1024px
-and 1440px after the layout and components are completed.
-
-| Viewport | Width |
-|---|---:|
-| Mobile | 320px |
-| Tablet | 768px |
-| Laptop | 1024px |
-| Desktop | 1440px |
-
-Additional browser zoom testing:
-
-- 200% zoom
-- 300% zoom at 1440px viewport width
+- Mobile: single-column layout.
+- Tablet: adjusted spacing and component layouts.
+- Desktop: two-column layout with main content and sidebar.
+- Flexible images and content to prevent horizontal overflow.
 
 ---
 
 ## 7. Light and Dark Themes
 
-The website will support the user's system colour preference through `prefers-color-scheme`.
+The website supports light and dark colour schemes based on the user's system preference using the CSS `prefers-color-scheme` media feature.
 
-JavaScript-based theme switching is not required for this assignment.
+The dark theme is the default theme, while the light theme is activated when the user's operating system is set to light mode.
 
-Implementation and testing notes: To be completed.
+Theme colours are managed using CSS custom properties, allowing consistent styling across the website.
 
 ---
 
-## 8. Performance and Quality Assurance
+## 8. Testing and Quality Assurance
 
 ### HTML Validation
-The HTML will be checked using the W3C Markup Validation Service.
 
-**Result:** To be completed.
+The HTML is checked using the W3C Nu HTML Checker.
 
-### Lighthouse Requirements
+**Result:** ![W3C Nu HTML Checker result](images/screenshots/html-validator.png)
 
-Tests will be performed in mobile mode.
+### CSS Validation
+
+The CSS is checked using the W3C CSS Validator.
+
+**Result:** ![W3C CSS Validator result](images/screenshots/css-validator.png)
+
+### Lighthouse Audits
+
+Lighthouse audits are performed in mobile mode.
 
 | Category | Required Score | Actual Score |
-|---|---:|---:|
-| Accessibility | 100 | Pending |
-| Best Practices | 95 | Pending |
-| Performance | 90 | Pending |
+| -------- | -------------: | -----------: |
+| Accessibility | 100 | 100 |
+| Best Practices | 95 | 100 |
+| Performance | 90 | 98 |
+| SEO | 100 | 100 |
+| Agentic browsing | 2/2 | 2/2 |
 
-A screenshot of the final Lighthouse results will be added here.
+**Result:**![Lighthouse result](images/screenshots/lighthouse.png)
+
+### WAVE Validation
+
+The accessibility of the website is checked using the WAVE Web Accessibility Evaluation Tool.
+
+**Result:** ![Wave Validator result](images/screenshots/accessibility-result)
 
 ### Additional Testing
 
-- No horizontal scrolling
-- No overlapping or clipped content
-- Keyboard navigation testing
-- Colour contrast testing
-- Browser console inspection
-- Responsive layout testing
+- Keyboard navigation and visible focus indicators.
+- Colour contrast in both light and dark themes.
+- Browser console inspection.
+- Responsive layout at different viewport widths.
+- Browser zoom at 200% and 300%.
+- Reduced-motion preferences.
+- Checks for horizontal overflow, overlapping elements, and clipped content.
+
+### Responsive Testing Screenshots
+
+Screenshots will document the website's layout at selected viewport widths, including mobile and tablet
+
+![Responsive at 320 result](images/screenshots/mobile-responsive.png)
+
+![Responsive at 768 result](images/screenshots/tablet-responsive.png)
 
 ---
 
 ## 9. Git Workflow
 
-The project will be developed incrementally and documented through meaningful commits.
+Git is used for version control, while GitHub hosts the project repository and supports collaboration and deployment.
+
+The project is developed incrementally, with meaningful commits documenting implementation changes, fixes, and documentation updates.
 
 **Commit convention:** Conventional Commits.
 
@@ -419,122 +382,52 @@ Examples:
 - `fix: improve mobile navigation`
 - `docs: document accessibility testing`
 
-The Git history will reflect the actual development process.
-
 ---
 
 ## 10. AI Usage and Learning Process
 
 ### AI Tools
 
-- ChatGPT
-- GitHub Copilot in Visual Studio Code, when needed
-- Google Stitch [https://stitch.withgoogle.com/]
+- **ChatGPT** – design guidance, technical explanations, troubleshooting, and SVG asset generation.
+- **GitHub Copilot** – coding assistance and suggestions in Visual Studio Code when needed.
+- **Google Stitch** – design exploration and visual prototypes ([Google Stitch](https://stitch.withgoogle.com/)).
 
 ### How AI Was Used
 
-To be completed throughout the project.
+- **Google Stitch** was used to explore visual directions and create initial design prototypes.
+- **ChatGPT** was used to generate SVG graphics and provide guidance on HTML, SCSS, CSS, accessibility, and responsive design.
+- **GitHub Copilot** was used selectively for coding assistance and code suggestions.
+- AI assistance was also used to review implementation decisions, troubleshoot issues, and improve project documentation.
 
-- Google Stitch [https://stitch.withgoogle.com/] was used for design prototype
-- ChatGPT created svg images
+### Learning and Human Contribution
 
-### Learning Outcomes
+AI tools were used as supporting resources rather than as replacements for the development process.
 
-To be completed with practical examples of concepts learned and implemented independently.
+The project structure, implementation decisions, and final code were reviewed and adapted throughout development. AI-generated suggestions were evaluated rather than accepted automatically.
 
-### Challenges and Knowledge Gaps
-
-To be documented honestly during development.
-
-### Critical Reflection
-
-A final reflection on:
-
-- What worked well
-- What could be improved
-- Which concepts required additional study
-- How AI assistance influenced the development process
-- What I would do differently in a future project
+The development process focused on understanding semantic HTML, SCSS organisation, CSS layout techniques, responsive design, accessibility, and version control.
 
 ---
 
-## 11. Final Project Checklist
+## 11. Credits and Disclaimer
 
-- [ ] All assignment requirements fulfilled
-- [ ] Semantic HTML validated with zero errors
-- [ ] SCSS compiled successfully
-- [ ] Prettier formatting applied
-- [ ] CSS naming convention documented
-- [ ] At least five advanced CSS selectors implemented
-- [ ] CSS animation implemented
-- [ ] Reduced-motion support implemented
-- [ ] Light and dark themes tested
-- [ ] Hover and keyboard focus interactions tested
-- [ ] Responsive layouts tested at all required widths
-- [ ] 200% and 300% zoom tested
-- [ ] WCAG AA contrast checked
-- [ ] Lighthouse scores meet requirements
-- [ ] Lighthouse screenshot added
-- [ ] Git history meets assignment requirements
-- [ ] AI usage and learning reflection documented
-- [ ] `.gitignore` included
+CHAIN REACTION is a fictional Web3 and Blockchain conference website created as part of an educational web development assignment.
+
+All speaker profiles, programme sessions, event details, and ticket prices are fictional and created for demonstration purposes.
+
+Any real company names or logos included in the Sponsors section are presented for illustrative purposes only and do not imply official sponsorship, partnership, or endorsement.
+
+External resources, fonts, and third-party assets are acknowledged where applicable, in accordance with their respective usage and licensing requirements.
 
 ---
 
-## 12. Credits and Disclaimer
+## 12. Future Improvements
 
-CHAIN REACTION is a fictional conference created as part of an educational web development assignment.
+Possible future improvements include:
 
-All speaker profiles, programme details, ticket information and event details are fictional unless otherwise stated.
-
-External resources, fonts and image sources will be credited here.
-
-## Picture of speakers
-
-![speeaker1](images/speakers/image1.png)
-![speaker](images/speakers/speaker.png)
-
-tree /F
-
-![Professionellt techporträtt med lila ljus](<alex-morgan.png>)
-
-### Image Optimization with Python & Pillow
-
-```bash
-py -m pip show Pillow
-```
-
-```bash
-py -c "from PIL import Image; image = Image.open('images/speakers/alex-morgan.png'); image.thumbnail((600, 750), Image.Resampling.LANCZOS); image.save('images/speakers/alex-morgan.webp', 'WEBP', quality=85, method=6); image.close()"
-```
-
-```python
-from PIL import Image
-
-with Image.open("profile-picture.png") as image:
-    image.thumbnail((800, 800), Image.Resampling.LANCZOS)
-    image.save("profile-picture.webp", "WEBP", quality=85, method=6)
-```
-
-### overflow
-
-```bash
-document.documentElement.scrollWidth >
-document.documentElement.clientWidth
-```
-
-```bash
-[...document.querySelectorAll('body *')]
-    .filter((element) => {
-        const rect = element.getBoundingClientRect();
-        return rect.right > document.documentElement.clientWidth;
-    })
-    .map((element) => ({
-        element: element.tagName,
-        class: element.className,
-        right: Math.round(element.getBoundingClientRect().right),
-        width: Math.round(element.getBoundingClientRect().width),
-    }));
-```
-
-![växjö konsert hus map](map.png)
+- **Expanded Visual Content** – add more original or appropriately licensed images and visual assets.
+- **Enhanced Accessibility** – continue improving accessibility based on validation results and usability testing.
+- **Responsive Refinements** – further optimise spacing, typography, and component layouts across different screen sizes.
+- **Interactive Programme** – introduce an interactive conference schedule to help visitors explore sessions.
+- **Improved Venue Information** – provide more detailed directions and visitor information.
+- **SEO Improvements** – further refine metadata, page descriptions, and social sharing information.
