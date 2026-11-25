@@ -425,5 +425,5 @@ Possible future improvements include:
 - **Responsive Refinements** – further optimise spacing, typography, and layouts across different screen sizes.
 - **Interactive Programme** – introduce an interactive conference schedule to help visitors explore sessions.
 - **Interactive Ticket Selection** – implement ticket selection and a functional booking process using JavaScript and a suitable backend.
-- **Improved Venue Information** – provide more detailed directions and visitor information.
+- **Improved Venue Information** – provide more detailed directions and visitor information .
 - **SEO Improvements** – further refine metadata, page descriptions, and social sharing information.
